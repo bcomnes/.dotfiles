@@ -1,0 +1,53 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+
+# Any Variables that you would like to set yourself should go here.
+# For Example:
+# export PATH="${PATH}:${HOME}/bin"
+# export TERM=vt100
+# export EDITOR=vim
+# export PS1="\u@\h:\w:\! > "
+# alias c='clear'
+# alias l='ls -al'
+
+#export LD_LIBRARY_PATH="/usr/lib64:$LD_LIBRARY_PATH"
+#source /etc/profile
+module load openmpi-x86_64
+module load mpich2-x86_64
+
+if [ -z "$LD_LIBRARY_PATH" ]; then
+  LD_LIBRARY_PATH="$HOME/lib64"
+else
+  LD_LIBRARY_PATH="$HOME/lib64:$LD_LIBRARY_PATH"
+fi
+export LD_LIBRARY_PATH
+
+if [ -z "$ACLOCAL_PATH" ]; then
+  ACLOCAL_PATH="/vol/apps/system/share/aclocal:/vol/apps/system/share/aclocal-1.11:/vol/apps/system/share/"
+else
+  ACLOCAL_PATH="/vol/apps/system/share/aclocal:$ACLOCAL_PATH"
+fi
+export ACLOCAL_PATH
+
+
+#PATH=$PATH:/vol/apps_old/user/bin:/vol/apps_old/user/system:/vol/apps_old/bin
+#export PATH
+
+export PYENV_ROOT="/vol/apps/system/python/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PERLBREW_ROOT=/vol/apps/system/perl
+source $PERLBREW_ROOT/etc/bashrc
+
+export PGI=/vol/apps/system/pgi
+export PATH=$PGI/linux86-64/2014/bin:$PATH
+export MANPATH=$MANPATH:$PGI/linux86-64/2014/man
+export LM_LICENSE_FILE=$LM_LICENSE_FILE:27005@pgi.license.pdx.edu:$PGI/license.dat
+

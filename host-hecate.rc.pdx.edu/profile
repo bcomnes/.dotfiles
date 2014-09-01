@@ -1,0 +1,20 @@
+# The Default ~/.profile file
+
+# Get global variables
+test -f /etc/sh.local && . /etc/sh.local
+
+# Comment out the next three lines if you do not want the menu.
+if [ -f $MENU ]; then
+	. $MENU
+fi
+
+# Any Variables that you would like to set yourself should go here.
+# For Example:
+# PATH="${PATH}:${HOME}/bin"
+# TERM=vt100
+# EDITOR=vim
+# PS1='$LOGNAME:$PWD:! > '
+# export PATH TERM EDITOR PS1
+# alias c='clear'
+# alias l='ls -al'
+

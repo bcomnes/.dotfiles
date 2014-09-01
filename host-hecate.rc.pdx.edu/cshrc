@@ -1,0 +1,17 @@
+# The Default ~/.cshrc file
+
+# Get global settings
+if ( -f /etc/cshrc.local ) source /etc/cshrc.local
+
+# Any Variables that you would like to set yourself should go here.
+# For Example:
+# setenv PATH "${PATH}:${HOME}/bin"
+# setenv TERM "vt100"
+# setenv EDITOR "vim"
+# alias c 'clear'
+# alias l 'ls -al'
+
+#setenv LD_LIBRARY_PATH /usr/lib64:/usr/lib
+setenv PERLBREW_ROOT /vol/apps/system/src/perl5/perlbrew
+#source /vol/apps/system/src/perl5/perlbrew/etc/cshrc
+

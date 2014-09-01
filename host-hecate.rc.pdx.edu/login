@@ -1,0 +1,12 @@
+# The default ~/.login 
+
+# Get any user defined aliases
+if ( -f ~/.aliases ) source ~/.aliases
+
+## Comment out the folowing line if you don't want the menu.
+if ( -f ${MENU_CSH} ) source ${MENU_CSH}
+
+# Any Variables that you would like to set yourself should go after here.
+# setenv PATH ${PATH}:${HOME}/bin
+# setenv TERM vt100
+
