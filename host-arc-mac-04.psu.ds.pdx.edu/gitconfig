@@ -1,0 +1,7 @@
+[user]
+	name = Bret Comnes
+	email = bcomnes@pdx.edu
+[color]
+	ui = true
+[push]
+	default = matching
