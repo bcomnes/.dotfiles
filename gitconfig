@@ -3,8 +3,13 @@
 [user]
 	name = Bret Comnes
 	email = bcomnes@gmail.com
-[git-tmbundle]
-	gitx-path = /Applications/GitX.app
+[push]
+  default = simple
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+[merge]
+  tool = opendiff
 [alias]
 ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -32,7 +37,7 @@ st = status -s
 cl = clone
 ci = commit
 co = checkout
-br = branch 
+br = branch
 diff = diff --word-diff
 dc = diff --cached
 
@@ -53,10 +58,5 @@ ss = stash save
 
 logtree = log --graph --oneline --decorate --all
 	wdiff = diff
-[push]
-	default = simple
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-[merge]
-	tool = opendiff
+[git-tmbundle]
+  gitx-path = /Applications/GitX.app
