@@ -18,9 +18,9 @@ set showcmd
 "set wildmenu
 "set wildmode=list:longest
 "set visualbell
-set cursorline
+"set cursorline
 "set ttyfast
-set ruler
+"set ruler
 "set backspace=indent,eol,start
 "set laststatus=2
 "set relativenumber
@@ -29,14 +29,14 @@ set ruler
 " Changes below are all by boot
 " ------------------------------
 
-" Work-around incomplete terminfo databases                                     
-" Particulalry useful when under `screen`, which may or may not be attached to  
-" a physical terminal capable of 256color mode. 
-" http://www.robmeerman.co.uk/unix/256colours                                
+" Work-around incomplete terminfo databases
+" Particulalry useful when under `screen`, which may or may not be attached to
+" a physical terminal capable of 256color mode.
+" http://www.robmeerman.co.uk/unix/256colours
 if match($TERMCAP, 'Co#256:') == 0 || match($TERMCAP, ':Co#256:') > 0
     set t_Co=256
 endif
 
 " Enable syntax hilightiting
 syntax enable
-set number
+"set number
