@@ -1,0 +1,67 @@
+# Yummy Hints
+# http://jamesmoss.co.uk/page2/
+#Host *
+#ForwardAgent yes
+
+# Computers
+
+Host bret-mbp
+  hostname bret-mbp.local
+  user bret
+  port 7788
+
+# Servers
+
+Host phi
+  hostname phi.bret.io
+  user marx
+  ForwardAgent yes
+
+# Friends
+
+Host lukanonet
+  hostname  lukano.net
+  user boot
+  port 22222
+
+# Arc Hosts
+
+Host hecate
+  hostname hecate.rc.pdx.edu
+  user bcomnes
+  ForwardAgent yes
+
+Host odin
+  hostname odin.pdx.edu
+  user bcomnes
+  ForwardAgent yes
+
+Host gravel
+  hostname gravel.research.pdx.edu
+  user bcomnes
+  ForwardAgent yes
+
+Host hydra
+  hostname hydra.rc.pdx.edu
+  user bcomnes
+  ForwardAgent yes
+
+Host circe
+  hostname circe.rc.pdx.edu
+  user bcomnes
+  ForwardAgent yes
+
+Host rc
+  hostname rc.pdx.edu
+  user bcomnes
+  ForwardAgent yes
+
+host arc-mac-03
+  hostname host-135-42.dhcp.pdx.edu
+  user bcomnes
+  ForwardAgent yes
+
+host arc-mac-04
+  hostname host-135-53.dhcp.pdx.edu
+  user bcomnes
+  ForwardAgent yes
