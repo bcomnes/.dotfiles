@@ -38,10 +38,6 @@ pull.default.uri=ssh://odin/home/bcomnes/.task/
 include /usr/local/share/doc/task/rc/holidays.en-US.rc
 calendar.holidays=full
 
-
-#task-web.user=boot
-#task-web.passwd=DQgRM77AMuskqLn7mvOXjG87dSWB3mL
-
 #report.mobile.description=Minimal Report for mobile screens
 #report.mobile.columns=description,due,project
 #report.mobile.labels=Description,Due,Project
