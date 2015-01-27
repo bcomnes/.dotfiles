@@ -1,6 +1,6 @@
 # Dotpiles
 
-These are my dotfiles.  They get symlinkned into place using [bcomnes/ansible-dotfiles](/bcomnes/ansible-dotfiles).
+These are my dotfiles.  They get symlinkned into place using [bcomnes/ansible-dotfiles](https://github.com/bcomnes/ansible-dotfiles).
 
 There are too many variables for a one-size fits all installation, but typically these files are put into place using config management... Look there.
 
