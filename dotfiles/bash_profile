@@ -27,7 +27,7 @@ if [ -f $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 
-# Enable .bash_aliases
+# Enable .bash_env
 if [ -f $HOME/.bash_env ]; then
     source $HOME/.bash_env
 fi
