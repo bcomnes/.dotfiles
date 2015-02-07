@@ -5,9 +5,6 @@
   email = bcomnes@gmail.com
 [push]
   default = simple
-[filter "media"]
-  clean = git-media-clean %f
-  smudge = git-media-smudge %f
 [core]
   excludesfile = /Users/bret/.gitignore_global
 [merge]
