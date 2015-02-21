@@ -1,5 +1,7 @@
 set nocompatible              " be iMproved, required
+set modelines=0               " turn of modelines... whatever those may be
 filetype off                  " required
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -14,7 +16,8 @@ Plugin 'gmarik/Vundle.vim'
 " " Keep Plugin commands between vundle#begin/end.
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
+Plugin 'jelera/vim-javascript-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
