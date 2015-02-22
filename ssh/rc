@@ -6,7 +6,7 @@
 
 # Fix SSH auth socket location so agent forwarding works with screen.
 if test "$SSH_AUTH_SOCK" ; then
-    ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+    ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock.$(hostname)
 fi
 
 # Taken from the sshd(8) manpage.
