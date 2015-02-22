@@ -7,7 +7,6 @@ export GIT_EDITOR='vim'
 
 export HOMEBREW_GITHUB_API_TOKEN='b7fa126243a6e657aed76b42d8075afbd4f3f669'
 
-export HOSTNAME=$(hostname)
 
 # Enable ansible generated .env
 if [ -f $HOME/.env ]; then
