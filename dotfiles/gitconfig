@@ -3,10 +3,10 @@
 [user]
   name = Bret Comnes
   email = bcomnes@gmail.com
-[push]
-  default = simple
 [core]
-  excludesfile = /Users/bret/.gitignore_global
+  excludesfile = ~/.gitignore_global
+[include]
+  path = ~/.gitenv
 [merge]
   tool = opendiff
 [alias]
