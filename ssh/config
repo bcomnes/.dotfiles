@@ -32,9 +32,20 @@ Host *.urbanairship.com
 
 Host bastion
   hostname bastion.prod.urbanairship.com
+  user bret
+  ForwardAgent yes
+
+
+Host admin
+  hostname admin.prod.urbanairship.com
+  user bret
+  ForwardAgent yes
 
 Host admin-1
   hostname admin-1.prod.urbanairship.com
+  user bret
+  ForwardAgent yes
+ 
 
 # Arc Hosts
 

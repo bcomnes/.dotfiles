@@ -47,3 +47,8 @@ calendar.holidays=full
 #shadow.file=~/Library/Application\ Support/Notational\ Data/Task\ Warrior.txt
 #shadow.command=mobile limit:50 rc.verbose=label
 #shadow.notify=off
+taskd.server=freecinc.com:53589
+taskd.key=\/Users\/bret\/.task\/freecinc_14a756ab.key.pem
+taskd.certificate=\/Users\/bret\/.task\/freecinc_14a756ab.cert.pem
+taskd.ca=\/Users\/bret\/.task\/freecinc_14a756ab.ca.pem
+taskd.credentials=FreeCinc\/freecinc_14a756ab\/627e7e14-6f3c-4d82-b073-9fba9ccfee58

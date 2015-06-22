@@ -59,3 +59,5 @@
   wdiff = diff
 [git-tmbundle]
   gitx-path = /Applications/GitX.app
+[github]
+	user = bcomnes
