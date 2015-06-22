@@ -3,26 +3,17 @@
 #Host *
 #ForwardAgent yes
 
-# Computers
+# Personal
 
 Host bret-mbp
   hostname bret-mbp.local
   user bret
   port 7788
 
-# Servers
-
-Host phi
-  hostname phi.bret.io
-  user marx
+Host pi
+  hostname pi.bret.io
+  user bret
   ForwardAgent yes
-
-# Friends
-
-Host lukanonet
-  hostname  lukano.net
-  user boot
-  port 22222
 
 # ua
 
@@ -45,7 +36,17 @@ Host admin-1
   hostname admin-1.prod.urbanairship.com
   user bret
   ForwardAgent yes
- 
+
+# Old Servers #
+
+Host phi
+  hostname phi.bret.io
+  user marx
+
+Host lukanonet
+  hostname  lukano.net
+  user boot
+  port 22222
 
 # Arc Hosts
 
