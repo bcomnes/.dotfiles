@@ -1,0 +1,5 @@
+# osx to arch alias'
+alias open='gnome-open'
+alias subl='subl3'
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
