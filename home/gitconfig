@@ -1,0 +1,18 @@
+[color]
+  ui = true
+[user]
+  name = Bret Comnes
+  email = bcomnes@gmail.com
+[github]
+  user = bcomnes
+[core]
+  excludesfile = ~/.gitignore_global
+[merge]
+  tool = opendiff
+[git-tmbundle]
+  gitx-path = /Applications/GitX.app
+[github]
+	user = bcomnes
+[include]
+  path = ~/.gitconfig.d/alias
+  path = ~/.gitconfig.d/push

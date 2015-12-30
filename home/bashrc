@@ -1,0 +1,37 @@
+#
+# ~/.bashrc
+#
+
+# .d folder style bashrc
+# https://gist.github.com/bcomnes/5053fca2d7be573c0abd
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+run_scripts () {
+  local script
+
+  for script in $1/*; do
+
+    # skip non-executable snippets and folders
+    [ -f "$script" ] && [ -x "$script" ] || continue
+
+    # execute $script in the context of the current shell
+    . $script
+  done
+}
+
+
+# if DEFAULT_PATH not set
+if [[ -z "$DEFAULT_PATH" ]] ; then
+  # set it!
+  export DEFAULT_PATH=$PATH
+fi
+
+# reset path to default path for idempotent bashrc sourcing
+export PATH=$DEFAULT_PATH
+
+# bashrc folder
+BASHRCD=~/.bashrc.d
+
+# run all the bash settings
+run_scripts "$BASHRCD"
