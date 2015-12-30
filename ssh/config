@@ -5,7 +5,7 @@
 
 # Computers
 
-Host bret-mbp, bret-mbp.local
+Host bret-mbp.local
   hostname bret-mbp.local
   user bret
   port 7788
@@ -21,11 +21,6 @@ Host li.bret.io
 	ForwardAgent yes
 	hostname 45.56.86.54
 
-Host phi, phi.bret.io
-  hostname phi.bret.io
-  user marx
-  ForwardAgent yes
-
 # Friends
 
 Host lukanonet, lukano.net
@@ -33,44 +28,3 @@ Host lukanonet, lukano.net
   user boot
   port 22222
 
-# Arc Hosts
-
-Host hecate, hecate.rc.pdx.edu
-  hostname hecate.rc.pdx.edu
-  user bcomnes
-  ForwardAgent yes
-
-Host odin, odin.pdx.edu
-  hostname odin.pdx.edu
-  user bcomnes
-  ForwardAgent yes
-
-Host gravel, gravel.rc.pdx.edu
-  hostname gravel.rc.pdx.edu
-  user bcomnes
-  ForwardAgent yes
-
-Host hydra, hydra.rc.pdx.edu
-  hostname hydra.rc.pdx.edu
-  user bcomnes
-  ForwardAgent yes
-
-Host circe, circe.rc.pdx.edu
-  hostname circe.rc.pdx.edu
-  user bcomnes
-  ForwardAgent yes
-
-Host rc, herra,rc.pdx.edu
-  hostname rc.pdx.edu
-  user bcomnes
-  ForwardAgent yes
-
-host arc-mac-03, host-135-42.dhcp.pdx.edu
-  hostname host-135-42.dhcp.pdx.edu
-  user bcomnes
-  ForwardAgent yes
-
-host arc-mac-04, host-135-53.dhcp.pdx.edu
-  hostname host-135-53.dhcp.pdx.edu
-  user bcomnes
-  ForwardAgent yes
