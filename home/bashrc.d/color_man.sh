@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Colored Man pages
 # https://wiki.archlinux.org/index.php/Man_page#Colored_man_pages
 man() {

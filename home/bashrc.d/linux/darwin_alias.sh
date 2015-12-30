@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # osx to arch alias'
 alias open='gnome-open'
 alias subl='subl3'

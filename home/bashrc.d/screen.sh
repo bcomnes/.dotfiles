@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Sets up 256 Color in vim under screen
 # http://www.robmeerman.co.uk/unix/256colours
 # Relates to something in .vimrc

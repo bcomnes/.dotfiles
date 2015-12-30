@@ -1,5 +1,3 @@
-#!/bin/bash
-#
 # editor
 # https://wiki.archlinux.org/index.php/Environment_variables#Examples
 export EDITOR='vim'
