@@ -20,15 +20,16 @@ run_scripts () {
   done
 }
 
-
+# ensure idempotent bashrc sourcing
+#
 # if DEFAULT_PATH not set
 if [[ -z "$DEFAULT_PATH" ]] ; then
   # set it!
   export DEFAULT_PATH=$PATH
+else
+  # reset path to default path for idempotent bashrc sourcing
+  export PATH=$DEFAULT_PATH
 fi
-
-# reset path to default path for idempotent bashrc sourcing
-export PATH=$DEFAULT_PATH
 
 # bashrc folder
 BASHRCD=~/.bashrc.d
