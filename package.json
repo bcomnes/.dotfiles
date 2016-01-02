@@ -1,0 +1,23 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "These are my dotfiles.  They get symlinkned into place using ~~[bcomnes/ansible-dotfiles](https://github.com/bcomnes/ansible-dotfiles).~~  Ansible is not a great tool for this.  Time to write my own.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcomnes/dotfiles.git"
+  },
+  "author": "Bret Comnes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcomnes/dotfiles/issues"
+  },
+  "homepage": "https://github.com/bcomnes/dotfiles#readme",
+  "dependencies": {
+    "map-async": "^0.1.1",
+    "run-waterfall": "^1.1.3"
+  }
+}
