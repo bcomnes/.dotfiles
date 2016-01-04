@@ -1,64 +1,118 @@
 var fs = require('fs')
 var path = require('path')
-// var map = require('map-async')
+var parallelLimit = require('run-parallel-limit')
 var waterfall = require('run-waterfall')
+var truthy = require('@bret/truthy')
 var os = require('os')
+var sliced = require('sliced')
 
-var dotfilesPath = path.join(__dirname, 'home')
+var log = require('log-errback')
 
-waterfall([
-  fs.readdir.bind(null, dotfilesPath),
-  processFileNames
-], logger)
+var proto = {
+  src: path.join(os.homedir(), '.dotfiles', 'home'),
+  dest: os.homedir(),
 
-function logger (err, results) {
-  var args = [].slice.call(arguments)
-  args.shift() // shift out errors
-  if (err) console.error(err)
-  if (args) args.forEach(arg => console.log(arg))
-  console.log('done')
-}
+  status: function status (cb) {
+    waterfall([
+      fs.readdir.bind(null, this.src), // (cb) => (err, fileNames)
+      getFileNames.bind(null, this.src, this.dest),
+      gatherStats
+    ], cb)
+  },
 
-function processFileNames (fileNames, cb) {
-  var paths = fileNames.map((fileName) => {
-    var src = resolveJoin(dotfilesPath, fileName)
-    var dest = resolveJoin(os.homedir(), '.' + fileName)
-    var relative = simpleRelative(dest, src)
-
-    return {
-      name: fileName,
-      src: src,
-      dest: dest,
-      relative: relative
+  link: function link (opts, cb) {
+    var self = this
+    var defaults = {
+      action: 'overwrite'
+    // "overwrite_all"
+    // "backup"
+    // "backup_all"
+    // "skip"
     }
-  })
-
-  cb(null, paths)
+    var options = Object.assign({}, defaults, opts)
+    self.status()
+  }
 }
 
+function linkyDink (opts) {
+  if (!opts) opts = {}
+  var instance = Object.create(proto)
+  return Object.assign(instance, opts)
+}
+
+//
+// processFileNames
+// (fileNames, cb) => (err, paths)
+function getFileNames (src, dest, fileNames, cb) {
+  var paths = fileNames.map(genPaths.bind(null, src, dest))
+  process.nextTick(cb, null, paths)
+}
+
+function genPaths (srcDir, destDir, fileName) {
+  var src = resolveJoin(srcDir, fileName)
+  var dest = resolveJoin(destDir, '.' + fileName)
+  var relative = path.relative(path.dirname(dest), src)
+  var link = relative.indexOf('../..') === -1 ? relative : src
+
+  return {
+    name: fileName,
+    src: src,
+    dest: dest,
+    relative: relative,
+    link: link
+  }
+}
+
+//
+// resolveJoin
+// join and resolve n segments
 function resolveJoin (segment1, segment2 /* etc */) {
-  var paths = [].slice.call(arguments)
+  var paths = sliced(arguments)
   return path.resolve(path.join.apply(null, paths))
 }
 
-function simpleRelative (dest, src) {
-  // calcualte relative path between dest and src
-  var relative = path.relative(path.dirname(dest), src)
-  // return resolved src if dest is behind the src
-  if (relative.indexOf('..') > -1) return src
-  // else return the simple relative path
-  return relative
+//
+// gatherStats
+// (paths, cb) => (err, stats)
+function gatherStats (filePaths, cb) {
+  var fileStatters = filePaths.map(makeStatters)
+  parallelLimit(fileStatters, 5, cb)
 }
 
-function statFile (filename, cb) {
-  var fullPath = path.join(home, filename)
-  fs.lstat(fullPath, function withStats (err, stats) {
+function makeStatters (filePath) {
+  function statter (cb) {
+    statFile(filePath, cb)
+  }
+  return statter
+}
+
+//
+// statFile
+// stats files and adds the status object
+function statFile (file, cb) {
+  fs.lstat(file.dest, function withStats (err, stats) {
     if (err && err.code !== 'ENOENT') return cb(err)
-    var results = {
-      filename: filename,
-      exists: truthy(stats),
-      stats: stats || null
-    }
-    cb(null, results)
+    var fileStats = file
+    fileStats.stats = stats || null
+    fileStats.exists = truthy(stats)
+    cb(null, fileStats)
   })
 }
+
+//
+// prepareDest
+// (stats, cb) => (err, preResults)
+function prepareDest (stats, cb) {
+}
+
+//
+// symlink
+// (preResults, cb) => (err, results)
+function symlink (stats, cb) {
+}
+
+module.exports = linkyDink
+
+var linky = linkyDink()
+
+linky.status(log.sync)
