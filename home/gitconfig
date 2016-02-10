@@ -11,8 +11,6 @@
   tool = opendiff
 [git-tmbundle]
   gitx-path = /Applications/GitX.app
-[github]
-	user = bcomnes
 [include]
   path = ~/.gitconfig.d/alias
   path = ~/.gitconfig.d/push
