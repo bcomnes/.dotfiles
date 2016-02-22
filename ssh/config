@@ -1,16 +1,14 @@
 # Yummy Hints
 # http://jamesmoss.co.uk/page2/
-#Host *
-#ForwardAgent yes
 
 # Computers
 
-Host bret-mbp.local
-  hostname bret-mbp.local
+Host bret-mbr.local 
+  hostname bret-mbr.local
   user bret
   port 7788
 
-Host bret-raspi.local, pi.bret.io
+Host bret-raspi.local pi.bret.io
 	user bret
 	ForwardAgent yes
 
