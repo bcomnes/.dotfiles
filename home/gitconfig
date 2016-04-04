@@ -3,6 +3,7 @@
 [user]
   name = Bret Comnes
   email = bcomnes@gmail.com
+	username = bcomnes
 [github]
   user = bcomnes
 [core]
@@ -14,3 +15,5 @@
 [include]
   path = ~/.gitconfig.d/alias
   path = ~/.gitconfig.d/push
+[diff]
+	algorithm = patience
