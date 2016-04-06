@@ -1,6 +1,6 @@
 # Dotpiles
 
-These are my dotfiles.  They get symlinkned into place using ~~[bcomnes/ansible-dotfiles](https://github.com/bcomnes/ansible-dotfiles).~~  Ansible is not a great tool for this.  Time to write my own.
+These are my dotfiles.  They get symlinkned into place using ~~[bcomnes/ansible-dotfiles](https://github.com/bcomnes/ansible-dotfiles).~~  ~~Ansible is not a great tool for this.  Time to write my own.~~ Migrating to [bork](https://github.com/mattly/bork).
 
 There are too many variables for a one-size fits all installation, but typically these files are put into place using config management.
 
