@@ -1,19 +1,16 @@
 [color]
-  ui = true
+	ui = auto
 [user]
   name = Bret Comnes
   email = bcomnes@gmail.com
-	username = bcomnes
-[github]
-  user = bcomnes
+  username = bcomnes
 [core]
   excludesfile = ~/.gitignore_global
-[merge]
-  tool = opendiff
-[git-tmbundle]
-  gitx-path = /Applications/GitX.app
 [include]
   path = ~/.gitconfig.d/alias
-  path = ~/.gitconfig.d/push
+	path = ~/.gitconfig.d/push
+	path = ~/.gitconfig.d/merge
 [diff]
 	algorithm = patience
+[gpg]
+	program = gpg2
