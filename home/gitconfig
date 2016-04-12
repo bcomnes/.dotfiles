@@ -1,16 +1,16 @@
-[color]
-	ui = auto
 [user]
-  name = Bret Comnes
-  email = bcomnes@gmail.com
-  username = bcomnes
+	name = Bret Comnes
+	email = bcomnes@gmail.com
+	username = bcomnes
 [core]
-  excludesfile = ~/.gitignore_global
-[include]
-  path = ~/.gitconfig.d/alias
-	path = ~/.gitconfig.d/push
-	path = ~/.gitconfig.d/merge
+	excludesfile = ~/.gitignore_global
 [diff]
 	algorithm = patience
-[gpg]
-	program = gpg2
+[color]
+	ui = auto
+[include]
+	path = ~/.gitconfig.d/push
+	path = ~/.gitconfig.d/diff
+	path = ~/.gitconfig.d/gpg
+	path = ~/.gitconfig.d/alias
+
