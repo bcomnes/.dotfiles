@@ -8,5 +8,5 @@ done
 cd ~/.ssh
 
 for config in $HOME/.dotfiles/ssh/*; do
-  ok symlink ".$(basename $config)" $config
+  ok symlink "$(basename $config)" $config
 done
