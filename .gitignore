@@ -1,4 +1,7 @@
-authorized_keys
-id_*
 *token*
-
+configs/config/*
+!configs/config/htop
+ssh/*
+!ssh/config
+!ssh/known_hosts
+!ssh/rc
