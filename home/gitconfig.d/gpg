@@ -1,7 +1,0 @@
-[user]
-	signingkey = 4DC3A1AC
-[gpg]
-	program = gpg2
-[commit]
-	gpgsign = true
-
