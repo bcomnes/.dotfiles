@@ -14,6 +14,6 @@
 [include]
 	path = ~/.gitconfig.d/push
 	path = ~/.gitconfig.d/diff
-	path = ~/.gitconfig.d/gpg
+	#path = ~/.gitconfig.d/gpg
 	path = ~/.gitconfig.d/alias
 
