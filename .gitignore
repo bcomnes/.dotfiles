@@ -1,6 +1,10 @@
 *token*
+
+# The config folder is opt in
 configs/config/*
 !configs/config/htop
+
+# The SSH folder is opt in for security reasons
 ssh/*
 !ssh/config
 !ssh/known_hosts

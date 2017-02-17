@@ -14,7 +14,7 @@ run_scripts () {
     # skip non-executable snippets and folders
     [ -f "$script" ] && [ -x "$script" ] || continue
 
-    # execute $script in the context of the current shell
+	# execute $script in the context of the current shell
     . $script
   done
 }
