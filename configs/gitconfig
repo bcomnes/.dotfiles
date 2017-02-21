@@ -4,6 +4,7 @@
 	username = bcomnes
 [core]
 	excludesfile = ~/.gitignore_global
+	ignorecase = false
 [diff]
 	algorithm = patience
 [color]
@@ -17,3 +18,12 @@
 	path = ~/.gitconfig.d/gpg
 	path = ~/.gitconfig.d/alias
 
+[commit]
+	gpgsign = true
+[alias]
+	cloner = clone --recursive
+	put = push origin HEAD
+[fetch]
+	prune = true
+[github]
+	user = bcomnes

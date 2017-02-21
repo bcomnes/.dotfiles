@@ -16,4 +16,4 @@ for config in $HOME/.dotfiles/ssh/*; do
   ok symlink "$(basename $config)" $config
 done
 
-ok download authorized_keys "https://github.com/bcomnes.keys"
+ok download authorized_keys "https://github.com/bcomnes.keys" --hash

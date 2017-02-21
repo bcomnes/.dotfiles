@@ -3,26 +3,24 @@
 
 # Computers
 
-Host bret-mbr.local 
-  hostname bret-mbr.local
-  user bret
-  port 7788
+AddKeysToAgent yes
+
+Host bret-mbr.local
+	hostname bret-mbr.local
+	user bret
+	port 7788
 
 Host raspi2.local raspi3.local pi.bret.io
 	user bret
 	ForwardAgent yes
 
-# Servers
-
-Host li.bret.io
+Host leaf.local zrouter.local
 	user bret
 	ForwardAgent yes
-	hostname 45.56.86.54
 
 # Friends
 
 Host lukanonet, lukano.net
-  hostname  lukano.net
-  user boot
-  port 22222
-
+	hostname  lukano.net
+	user boot
+	port 22222
