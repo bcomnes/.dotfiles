@@ -5,3 +5,4 @@ ssh/*
 !ssh/config
 !ssh/known_hosts
 !ssh/rc
+.DS_Store
