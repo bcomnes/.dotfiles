@@ -46,3 +46,5 @@
 
   logtree = log --graph --oneline --decorate --all
   wdiff = diff
+  cloner = clone --recursive
+  put = push origin HEAD

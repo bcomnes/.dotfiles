@@ -3,6 +3,7 @@
 
 # Computers
 
+UseKeychain yes
 AddKeysToAgent yes
 
 Host bret-mbr.local

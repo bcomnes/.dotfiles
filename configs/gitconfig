@@ -2,6 +2,8 @@
 	name = Bret Comnes
 	email = bcomnes@gmail.com
 	username = bcomnes
+[github]
+	user = bcomnes
 [core]
 	excludesfile = ~/.gitignore_global
 	ignorecase = false
@@ -12,18 +14,10 @@
 	diff=auto
 	status=auto
 	branch=auto
-[include]
-	path = ~/.gitconfig.d/push
-	path = ~/.gitconfig.d/diff
-	path = ~/.gitconfig.d/gpg
-	path = ~/.gitconfig.d/alias
-
-[commit]
-	gpgsign = true
-[alias]
-	cloner = clone --recursive
-	put = push origin HEAD
 [fetch]
 	prune = true
-[github]
-	user = bcomnes
+[include]
+	path = ~/.gitconfig.d/push
+	path = ~/.gitconfig.d/mergetool
+#	path = ~/.gitconfig.d/gpg
+	path = ~/.gitconfig.d/alias
