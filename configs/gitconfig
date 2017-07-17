@@ -21,3 +21,5 @@
 	path = ~/.gitconfig.d/mergetool
 	path = ~/.gitconfig.d/gpg
 	path = ~/.gitconfig.d/alias
+[push]
+	default = current
