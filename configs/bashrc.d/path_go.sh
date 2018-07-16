@@ -5,3 +5,7 @@ if [ -d $HOME/go ];
   then export GOPATH=$HOME/go ;
   export PATH=$PATH:$GOPATH/bin ;
 fi
+
+function gogo () {
+    cd $GOPATH/src/github.com/bcomnes
+}

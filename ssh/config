@@ -11,7 +11,7 @@ Host bret-mbr.local
 	user bret
 	port 7788
 
-Host raspi2.local raspi3.local pi.bret.io
+Host raspi2.local raspi3.local scl.bret.io
 	user bret
 	ForwardAgent yes
 

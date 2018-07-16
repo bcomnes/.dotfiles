@@ -8,18 +8,25 @@
 	excludesfile = ~/.gitignore_global
 	ignorecase = false
 [diff]
-	algorithm = patience
+	algorithm = histogram
 [color]
-	ui = auto
-	diff=auto
-	status=auto
-	branch=auto
+	diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = auto
+  pager = true
 [fetch]
 	prune = true
+[rebase]
+	autoStash = true
+[push]
+	default = simple
+[pull]
+	default = simple
 [include]
 	path = ~/.gitconfig.d/push
 	path = ~/.gitconfig.d/mergetool
 	path = ~/.gitconfig.d/gpg
 	path = ~/.gitconfig.d/alias
-[push]
-	default = current
+	path = ~/.gitconfig.d/keychain

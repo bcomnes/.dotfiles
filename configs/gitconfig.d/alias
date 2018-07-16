@@ -48,3 +48,5 @@
   wdiff = diff
   cloner = clone --recursive
   put = push origin HEAD
+  # https://gist.github.com/bkeating/329690#gistcomment-2331985
+  opendiff = difftool --no-prompt --tool opendiff --dir-diff
