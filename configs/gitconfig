@@ -18,15 +18,14 @@
   pager = true
 [fetch]
 	prune = true
+[push]
+	default = current
 [rebase]
 	autoStash = true
-[push]
-	default = simple
-[pull]
-	default = simple
 [include]
 	path = ~/.gitconfig.d/push
 	path = ~/.gitconfig.d/mergetool
 	path = ~/.gitconfig.d/gpg
 	path = ~/.gitconfig.d/alias
 	path = ~/.gitconfig.d/keychain
+	path = ~/.gitconfig.d/lfs

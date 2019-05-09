@@ -10,5 +10,4 @@ function gogo () {
     cd $GOPATH/src/github.com/bcomnes
 }
 
-export GOPROXY=https://microsoftgoproxy.azurewebsites.net/
-
+export GOPROXY=https://proxy.golang.org
