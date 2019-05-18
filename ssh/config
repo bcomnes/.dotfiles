@@ -1,27 +1,6 @@
-# Yummy Hints
-# http://jamesmoss.co.uk/page2/
-
-# Computers
-
 UseKeychain yes
 AddKeysToAgent yes
-
-Host bret-mbr.local
-	hostname bret-mbr.local
-	user bret
-	port 7788
 
 Host raspi2.local raspi3.local scl.bret.io
 	user bret
 	ForwardAgent yes
-
-Host leaf.local zrouter.local
-	user bret
-	ForwardAgent yes
-
-# Friends
-
-Host lukanonet, lukano.net
-	hostname  lukano.net
-	user boot
-	port 22222
