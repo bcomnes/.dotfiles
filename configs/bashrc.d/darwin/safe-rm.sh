@@ -1,2 +1,4 @@
 # some rm safety for day to day rms!
-alias rm="safe-rm";
+if [ -x "$(command -v safe-rm)" ]; then
+  alias rm="safe-rm";
+fi
