@@ -22,6 +22,14 @@ $ ./install/bret-dk
 
 Create or edit the host installer to include the various steps you want.
 
+## Structure
+
+*configs*: Any top level file or folder in `configs` is symlinked to ~/ and prefixed with a `.`.  Any conflicts are moved to `foo.bk` if it is a file, or `foo.symbk` if its a symlink conflict.  If you see conflict warnings, you shoudld handle those sooner than later since the conflict management is backup destructive. 
+
+*ssh*: SSH is a weird beast, since its so crucial to the boostrapping process and also contains vital secrets.  We symlink files from inside `ssh` to inside `~/.ssh/` instead of the whole folder. We also update `authorized_keys` from github. 
+
+*install*: Scripts to perform installs.  Usually you write a host script that can peice together different sub-scripts.  TODO write boostrappig scripts. 
+
 ## Bootstrapping nodes
 
 Some bootstrappig notes are in the `notes` folder.  TODO: automate some of that.
