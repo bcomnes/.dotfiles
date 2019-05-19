@@ -10,3 +10,7 @@ ssh/*
 !ssh/known_hosts
 !ssh/rc
 .DS_Store
+
+# Files that should never be checked in and shamefully store unencrypted tokens
+hub
+.npmrc
