@@ -68,6 +68,14 @@ To install, run:
 brew bundle
 ```
 
+## Mac crap
+
+Fixing font smoothing in some cases:
+
+```
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
+```
+
 ## References
 
 I did a few clever and simple bash things that I have found to be extremely bullet proof and simple.  They have survived mostly over the course of like 4-5 installs, which is a personal record.
