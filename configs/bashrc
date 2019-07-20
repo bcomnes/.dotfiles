@@ -36,4 +36,3 @@ BASHRCD=~/.bashrc.d
 
 # run all the bash settings
 run_scripts "$BASHRCD"
-

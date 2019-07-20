@@ -4,3 +4,8 @@ AddKeysToAgent yes
 Host raspi2.local raspi3.local scl.bret.io
 	user bret
 	ForwardAgent yes
+
+Host eurobox
+	HostName 95.179.141.100
+	user bret
+	ForwardAgent yes
