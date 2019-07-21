@@ -3,3 +3,4 @@
 
 "${BASH_SOURCE%/*}/dotfiles.sh"
 "${BASH_SOURCE%/*}/ssh.sh"
+"${BASH_SOURCE%/*}/vim.sh"
