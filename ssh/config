@@ -6,6 +6,6 @@ Host raspi2.local raspi3.local scl.bret.io
 	ForwardAgent yes
 
 Host eurobox
-	HostName 95.179.141.100
+	HostName 45.77.219.61
 	user bret
 	ForwardAgent yes

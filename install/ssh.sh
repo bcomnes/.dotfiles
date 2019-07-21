@@ -52,6 +52,12 @@ else
   echo "$github_keys" > ./authorized_keys
 fi
 
+echo "Fixing ssh permissions"
+chmod go-w ~/
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+echo "Done fixing ssh permissions"
+
 echo "Done setting up ~/.dotfiles/ssh"
 
 #ok download authorized_keys "https://github.com/bcomnes.keys" --hash
