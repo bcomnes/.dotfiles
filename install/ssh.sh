@@ -1,5 +1,6 @@
 echo "Setting up ~/.dotfiles/ssh"
 
+mkdir -p ~/.ssh
 cd ~/.ssh
 
 # a known_hosts file is created to bootstrap any git repos
