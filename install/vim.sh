@@ -1,6 +1,6 @@
 echo "Setting up Vim"
 
-mkdir -p ~/.vim{backup,tmp,undo}
+mkdir -p ~/.vim/{backup,tmp,undo}
 
 if [[ ! -d ~/.vim/bundle/Vundle.vim ]]; then
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
