@@ -1,5 +1,6 @@
 echo "Setting up ~/.dotfiles/ssh"
-
+ghuser="${1:-bcomnes}"
+echo "Github user: ${ghuser}"
 mkdir -p ~/.ssh
 cd ~/.ssh
 
@@ -33,8 +34,8 @@ for config in $HOME/.dotfiles/ssh/*; do
   fi
 done
 
-echo "Downloading github keys for bcomnes"
-github_keys=$(curl --silent --show-error --fail https://github.com/bcomnes.keys)
+echo "Downloading github keys for ${ghuser}"
+github_keys=$(curl --silent --show-error --fail https://github.com/${ghuser}.keys)
 github_keys_sha=$( echo "$github_keys" | sha1sum | awk '{print $1;}' )
 echo "Github keys sha: $github_keys_sha"
 
