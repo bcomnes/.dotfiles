@@ -1,11 +1,9 @@
+IgnoreUnknown AddKeysToAgent,UseKeychain,ServerAliveInterval
 UseKeychain yes
 AddKeysToAgent yes
+ServerAliveInterval 15
 
-Host raspi2.local raspi3.local scl.bret.io
+Host raspi2.local raspi3.local scl.bret.io euroarch.freed.farm
 	user bret
 	ForwardAgent yes
 
-Host eurobox
-	HostName euroarch.freed.farm
-	user bret
-	ForwardAgent yes
