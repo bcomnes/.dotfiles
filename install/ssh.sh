@@ -1,5 +1,6 @@
 echo "Setting up ~/.dotfiles/ssh"
-
+ghuser="${1:-bcomnes}"
+echo "Github user: ${ghuser}"
 mkdir -p ~/.ssh
 cd ~/.ssh
 
@@ -33,13 +34,15 @@ for config in $HOME/.dotfiles/ssh/*; do
   fi
 done
 
-echo "Downloading github keys for bcomnes"
-github_keys=$(curl --silent --show-error --fail https://github.com/bcomnes.keys)
+echo "Downloading github keys for ${ghuser}"
+github_keys=$(curl --silent --show-error --fail https://github.com/${ghuser}.keys)
 github_keys_sha=$( echo "$github_keys" | sha1sum | awk '{print $1;}' )
 echo "Github keys sha: $github_keys_sha"
 
 if [ -f ./authorized_keys ]; then
-  if [ $(cat ./authorized_keys | sha1sum | awk '{print $1;}') != $github_keys_sha ]; then
+  local_authorized_keys_sha=$(cat ./authorized_keys | sha1sum | awk '{print $1;}')
+  echo "Local authorized_keys sha: $local_authorized_keys_sha"
+  if [ $local_authorized_keys_sha != $github_keys_sha ]; then
     echo "existing ./authorized_keys file out of date"
     echo "moving existing ./authorized_keys to ./authorized_keys.bk"
     mv ./authorized_keys ./authorized_keys.bk
