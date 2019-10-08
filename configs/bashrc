@@ -4,6 +4,7 @@
 
 # .d folder style bashrc
 # https://gist.github.com/bcomnes/5053fca2d7be573c0abd
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
