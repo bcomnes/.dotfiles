@@ -6,4 +6,3 @@ ServerAliveInterval 15
 Host raspi2.local raspi3.local scl.bret.io euroarch.freed.farm
 	user bret
 	ForwardAgent yes
-

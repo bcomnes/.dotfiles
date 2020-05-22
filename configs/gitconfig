@@ -22,6 +22,8 @@
 	default = current
 [rebase]
 	autoStash = true
+[credential "https://github.com"]
+	username = bcomnes
 [include]
 	path = ~/.gitconfig.d/push
 	path = ~/.gitconfig.d/mergetool
