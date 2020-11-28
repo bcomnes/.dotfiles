@@ -31,3 +31,5 @@
 	path = ~/.gitconfig.d/alias
 	path = ~/.gitconfig.d/keychain
 	path = ~/.gitconfig.d/lfs
+[pull]
+	rebase = true
