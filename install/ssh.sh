@@ -60,6 +60,7 @@ echo "Fixing ssh permissions"
 chmod go-w ~/
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/*
 echo "Done fixing ssh permissions"
 
 echo "Done setting up ~/.dotfiles/ssh"
