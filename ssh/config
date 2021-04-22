@@ -3,6 +3,6 @@ UseKeychain yes
 AddKeysToAgent yes
 ServerAliveInterval 15
 
-Host raspi2.local raspi3.local scl.bret.io euroarch.freed.farm
+Host raspi2.local raspi3.local scl.bret.io euroarch.freed.farm ace.local raspi4.local
 	user bret
 	ForwardAgent yes
