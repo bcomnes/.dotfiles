@@ -1,4 +1,4 @@
 # brew sbin
 if [[ -d "$(brew --prefix)/opt/ruby/bin" ]]; then
-  export PATH=$(brew --prefix)/opt/ruby/bin:$PATH ;
+  export PATH=$PATH:$(brew --prefix)/opt/ruby/bin;
 fi

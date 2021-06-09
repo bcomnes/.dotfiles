@@ -16,10 +16,10 @@ Plugin 'gmarik/Vundle.vim'
 " " Keep Plugin commands between vundle#begin/end.
 Plugin 'wombat256.vim'
 "Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'airblade/vim-gitgutter'
 "Plugin 'bling/vim-airline'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 "Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 "Plugin 'terryma/vim-multiple-cursors'
@@ -28,7 +28,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
+" To ignore plugin indent changes, instead use:viml
 " "filetype plugin on
 "
 "" Brief help
@@ -49,7 +49,7 @@ filetype plugin indent on    " required
 "-----mystuff
 
 " enable whitespace
-:set list
+":set list
 
 "----syntastic stuff
 "set statusline+=%#warningmsg#
