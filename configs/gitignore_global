@@ -39,8 +39,13 @@ Thumbs.db
 # Tools and Editor files #
 ##########################
 *.sublime-workspace
+*.sublime-project
 
 # XCODE #
 *.xcuserstate
 project.xcworkspace/
 xcuserdata/
+
+# Nova #
+.nova
+
