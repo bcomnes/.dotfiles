@@ -82,3 +82,9 @@ I did a few clever and simple bash things that I have found to be extremely bull
 
 - [.bashrc.d](https://gist.github.com/bcomnes/5053fca2d7be573c0abd): fragment based bashrc files
 - [os_diff.sh](https://gist.github.com/bcomnes/13711d12237e866de5ca): target specific platforms with bash
+
+## Unifi hostname fix
+
+- ssh into USG
+-  remove the offending hostname from `/etc/hosts` with `vi`
+- reload dsnmasq `/etc/init.d/dnsmasq force-reload`

@@ -163,3 +163,4 @@ ec2-3-139-103-53.us-east-2.compute.amazonaws.com,3.139.103.53 ecdsa-sha2-nistp25
 raspi4.local. ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMw5o/ULfqU9uJlQnpG1dOtY+71AMdFCYkIC9/bI6eyBcoLeCrPMcgBWk2Z02PQGs8aLaSND2sH8TZlttZ02mos=
 ec2-52-43-115-46.us-west-2.compute.amazonaws.com,52.43.115.46 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAGY46zgsT18FzP8mwrCkHolAra4XWeSjucqajSXqoO+boAs9jEI8i7yGfLWsJkG1JrOju72Mn3c6xGdtKzpz90=
 raspi4.freed.farm. ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMw5o/ULfqU9uJlQnpG1dOtY+71AMdFCYkIC9/bI6eyBcoLeCrPMcgBWk2Z02PQGs8aLaSND2sH8TZlttZ02mos=
+192.168.1.1 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCenaZxR/zsIUpNzE/6RNoth3Q8AdXqVRRFbKk/08uE1Mp9LiOD2hBRggqBP/n1IvrPJSwpbmrfQ8uP8QxreUCA=
