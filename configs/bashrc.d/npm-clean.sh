@@ -1,1 +1,1 @@
-alias "npm-clean"="rm -rf node_modules package-lock.json && npm i";
+alias "npm-clean"="rm -rf node_modules package-lock.json yarn.lock && npm i";
