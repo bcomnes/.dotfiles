@@ -3,4 +3,5 @@
 if [[ -n "$ZSH_VERSION" ]]; then
   autoload -Uz compinit
   compinit
+  zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 fi
