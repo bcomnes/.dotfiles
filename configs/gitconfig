@@ -7,7 +7,8 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	ignorecase = false
-	commentChar = auto
+	#commentChar = auto
+	commentChar = "#"
 [diff]
 	algorithm = histogram
 [color]
@@ -36,3 +37,7 @@
 	rebase = true
 [init]
 	defaultBranch = master
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[help]
+	autoCorrect = prompt
