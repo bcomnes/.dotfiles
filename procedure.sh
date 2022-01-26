@@ -1,3 +1,5 @@
+# DONT ACTUALLY RUN THIS SINCE MANY STEPS ARE BY HAND
+
 # Create vanilla macOS account without iCloud (so you control the username)
 # Sidebar icon size: small
 # Side: large
@@ -27,59 +29,48 @@
 # Open terminal
 # clone dot files
 git clone https://github.com/bcomnes/.dotfiles.git
+# install terminal profile, switch
 # install homebrew
 # https://brew.sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-cd ~/.dotfiles/install/bret-netlify
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# bootstrap brew and run
+brew doctor
+# Install bundle apps (maybe break a few out to boostrap phase)
+cd ~/.dotfiles/
 brew bundle
-sudo xcodebuild -license accept
-git -C "$(brew --repo homebrew/core)" fetch --unshallow
-
-# set up new BASH
-# AUTOMATE THIS?
-# Advanced options
-sudoedit /etc/shells
 
 # set up 1Password
-# set up Resilio sync (set the name but link to existing ID)
 
 # generate ssh code: https://help.github.com/enterprise/2.10/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
-$ ssh-keygen -t ed25519 -C “bret-netlify”
+$ ssh-keygen -t ed25519 -C “new-computer-name”
 # add public key to GitHub
 cat ~/.ssh/id_ed25519.pub | pbcopy
 # ADD TO GitHub
 # https://github.com/settings/keys
-# update .dotfiles remote
-git remote set-url origin git@github.com:bcomnes/.dotfiles.git
-# props for password to cache it into keychain
+# Update authorized keys on other hosts
 
 # install dot files
-#cd ~/.dotfiles/install/bret-netlify
-# REPLACE BORK JESUS
+cd ~/.dotfiles/bootstrap
+./install-dotfiles.sh
 
-# Vim
-# vundle
-# https://github.com/VundleVim/Vundle.vim
-# CLEAN THIS SHIT UP THIS SUCKS
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+# Fix zsh compaudit if its borked:
+fix-compaudit
 
-# Moom license and preference
+# Moom license and preference (1Password)
 
 # Sublime Text
 # https://github.com/bcomnes/sublime-text-settings
 # add license
 
-# Atom
-apm install sync-settings
-# Set up sync settings
-
 # VS Code
+# Native setting sync
 
 # Environment Stuff
-mkdir ~/repos
-mkdir ~/netlify
+mkdir ~/Developer
 mkdir ~/go
+
+# set up Resilio sync (set the name but link to existing ID)
+# Accept a pro trial to get this working
 
 # Safari Settings
 #Review current settings
@@ -89,8 +80,9 @@ mkdir ~/go
 # only current website cookies
 
 # Internet accounts
-# Set up address book
-# Set up me card
+# Download a fastmail profile
+# https://www.fastmail.com/settings/security/devicekeys?u=70d94008
+# Fix names, check if its working
 
 # iTunes
 # Podcasts n crap.  Sign in etc.
@@ -100,7 +92,7 @@ mkdir ~/go
 
 # Finder
 # show path bar
-# show status bar
+# show status barx
 # Show everything on desktop
 # new windows open home
 # show everything in sidebar
@@ -139,3 +131,6 @@ System avatars
 
 # Decomission notes
 # unlink Resilio sync
+# Dotfile audit
+# Document audit
+# 

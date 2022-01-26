@@ -4,52 +4,19 @@ Thees are my dotfiles.  Here is an overview:
 
 ## Installing:
 
-Download them from github.
+Run
 
-```console
-$ cd ~
-$ git clone git@github.com:bcomnes/.dotfiles.git
+```sh
+./bootstrap/install-dotfiles.sh
 ```
 
-Bootstrap a ssh keys probably.
-
-Symlink the dotfiles
-
-```console
-$ cd ~/.dotfiles/
-$ ./install/bret-dk
-```
-
-Create or edit the host installer to include the various steps you want.
+to install and update dotfiles, however boot strapping is a more involved process.
+See [`procedure.sh`](./procedure.sh) for a series of notes on how to do this.
 
 ## Structure
 
-*configs*: Any top level file or folder in `configs` is symlinked to ~/ and prefixed with a `.`.  Any conflicts are moved to `foo.bk` if it is a file, or `foo.symbk` if its a symlink conflict.  If you see conflict warnings, you should handle those sooner than later since the conflict management is backup destructive.
-
-*ssh*: SSH is a weird beast, since its so crucial to the boostrapping process and also contains vital secrets.  We symlink files from inside `ssh` to inside `~/.ssh/` instead of the whole folder. We also update `authorized_keys` from github.
-
-*install*: Scripts to perform installs.  Usually you write a host script that can piece together different sub-scripts.  TODO write boostrappig scripts.
-
-![](screenshots/bashrc.png)
-![](screenshots/dotfiles.png)
-## Bootstrapping nodes
-
-Some bootstrappig notes are in the `notes` folder.  TODO: automate some of that.
-
-Some tasks you may need to perform:
-
-### Vim crap
-
-This setup sucks. Probably just delete this.
-
-```console
-# Vim
-# vundle
-# https://github.com/VundleVim/Vundle.vim
-# CLEAN THIS SHIT UP THIS SUCKS
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-```
+- *configs*: Any top level file or folder in `configs` is symlinked to ~/ and prefixed with a `.`.  Any conflicts are moved to `foo.bk` if it is a file, or `foo.symbk` if its a symlink conflict.  If you see conflict warnings, you should handle those sooner than later since the conflict management is backup destructive.
+- *ssh*: SSH is a weird beast, since its so crucial to the boostrapping process and also contains vital secrets.  We symlink files from inside `ssh` to inside `~/.ssh/` instead of the whole folder. We also update `authorized_keys` from github.
 
 ### Brew file
 
@@ -66,14 +33,6 @@ To install, run:
 
 ```cosole
 brew bundle
-```
-
-## Mac crap
-
-Fixing font smoothing in some cases:
-
-```
-defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 ```
 
 ## References
