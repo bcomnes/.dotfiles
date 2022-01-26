@@ -121,16 +121,18 @@ mkdir ~/go
 # Background
 # enable rotation
 
+#Turn on FileVault
 
-# TODO:
-Dark mode via flux
-Desktop background rotation
-Turn on FileVault
-System avatars
+# Copy Music Folder over with Library.
+# Hold option when launching and choose the copied library.
+# Throw out the old one
+#
+# Podcasts coupy the 243LU875E5.groups.com.apple.podcasts folder in Library/Group Containers
 
+# Move iPhone backup to new system
 
 # Decomission notes
 # unlink Resilio sync
 # Dotfile audit
 # Document audit
-# 
+# Unlink iTunes
