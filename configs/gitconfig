@@ -21,6 +21,7 @@
 	prune = true
 [push]
 	default = current
+	autoSetupRemote = true
 [rebase]
 	autoStash = true
 [credential "https://github.com"]
