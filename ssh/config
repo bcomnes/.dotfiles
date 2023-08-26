@@ -3,6 +3,10 @@ UseKeychain yes
 AddKeysToAgent yes
 ServerAliveInterval 15
 
-Host raspi4.freed.farm ace.local raspi4.local tp1.local tp2.local tp3.local tp4.local
+Host raspi4.freed.farm ace.local raspi4.local tp1.local tp2.local tp3.local
 	user bret
+	ForwardAgent yes
+
+Host tp4.local
+	user pi
 	ForwardAgent yes
