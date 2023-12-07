@@ -3,6 +3,7 @@
 # The config folder is opt in
 configs/config/*
 !configs/config/htop
+!configs/config/create-project.json
 
 # The SSH folder is opt in for security reasons
 ssh/*
