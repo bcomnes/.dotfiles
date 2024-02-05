@@ -1,1 +1,34 @@
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+# ~/.zshrc
+# Interactive stuff, like alias's and PS1s etc, just for ZSH
+
+# .d folder style bashrc
+# https://gist.github.com/bcomnes/5053fca2d7be573c0abd
+
+#set -o xtrace
+
+# If not running interactively, don't do anything
+#[[ $- != *i* ]] && return
+
+# echo 'zshrc'
+
+run_scripts () {
+  local script
+
+  for script in $1/*; do
+
+    # skip non-executable snippets and folders
+    [ -f "$script" ] && [ -x "$script" ] || continue
+
+    # execute $script in the context of the current shell
+    . $script
+  done
+}
+
+# bashrc folder
+RCD=~/.rc.d
+ZSHRCD=~/.zshrc.d
+
+# run all the settings
+run_scripts "$RCD"
+run_scripts "$ZSHRCD"
+

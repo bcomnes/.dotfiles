@@ -1,5 +1,12 @@
 #
 # ~/.bash_profile
 #
+# Non-interactive stuff like path, but just for bash!
+# echo 'bash_profile'
+
+# Source all sharable profile scripts
+[[ -f ~/.profile ]] && . ~/.profile
+
 # Do everything in bashrc
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+# TODO: delete this
+# [[ -f ~/.bashrc ]] && . ~/.bashrc

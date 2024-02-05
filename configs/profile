@@ -1,0 +1,33 @@
+# ~/.profile
+
+run_scripts () {
+  local script
+
+  for script in $1/*; do
+
+    # skip non-executable snippets and folders
+    [ -f "$script" ] && [ -x "$script" ] || continue
+
+    # execute $script in the context of the current shell
+    . $script
+  done
+}
+
+
+# ensure idempotent bashrc sourcing
+#
+# if DEFAULT_PATH not set
+if [[ -z "$DEFAULT_PATH" ]] ; then
+  # set it!
+  export DEFAULT_PATH=$PATH
+else
+  # reset path to default path for idempotent bashrc sourcing
+  export PATH=$DEFAULT_PATH
+fi
+
+
+# bashrc folder
+PROFILED=~/.profile.d
+
+# run all the bash settings
+run_scripts "$PROFILED"

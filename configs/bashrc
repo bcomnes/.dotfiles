@@ -1,12 +1,15 @@
 # ~/.bashrc
+# Interactive stuff, like alias's and PS1s etc
 
 # .d folder style bashrc
 # https://gist.github.com/bcomnes/5053fca2d7be573c0abd
 
 #set -o xtrace
 
+echo 'bashrc'
+
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+#[[ $- != *i* ]] && return
 
 run_scripts () {
   local script
@@ -21,19 +24,10 @@ run_scripts () {
   done
 }
 
-# ensure idempotent bashrc sourcing
-#
-# if DEFAULT_PATH not set
-if [[ -z "$DEFAULT_PATH" ]] ; then
-  # set it!
-  export DEFAULT_PATH=$PATH
-else
-  # reset path to default path for idempotent bashrc sourcing
-  export PATH=$DEFAULT_PATH
-fi
-
 # bashrc folder
+RCD=~/.rc.d
 BASHRCD=~/.bashrc.d
 
-# run all the bash settings
+# run all the settings
+run_scripts "$RCD"
 run_scripts "$BASHRCD"

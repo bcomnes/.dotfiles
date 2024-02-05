@@ -6,8 +6,4 @@ if [ -d $HOME/go ];
   export PATH=$PATH:$GOPATH/bin ;
 fi
 
-function gogo () {
-    cd $GOPATH/src/github.com/bcomnes
-}
-
-export GOPROXY=https://proxy.golang.org
+# export GOPROXY=https://proxy.golang.org
