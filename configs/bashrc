@@ -6,10 +6,10 @@
 
 #set -o xtrace
 
-echo 'bashrc'
+#echo 'bashrc'
 
 # If not running interactively, don't do anything
-#[[ $- != *i* ]] && return
+[[ $- != *i* ]] && return
 
 run_scripts () {
   local script

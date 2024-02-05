@@ -7,6 +7,5 @@
 # Source all sharable profile scripts
 [[ -f ~/.profile ]] && . ~/.profile
 
-# Do everything in bashrc
-# TODO: delete this
-# [[ -f ~/.bashrc ]] && . ~/.bashrc
+# Also load .bashrc when logging in
+[[ -f ~/.bashrc ]] && . ~/.bashrc
