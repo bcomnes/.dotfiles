@@ -1,11 +1,13 @@
-#
 # ~/.bash_profile
 #
 # Non-interactive stuff like path, but just for bash!
 # echo 'bash_profile'
 
-# Source all sharable profile scripts
-[[ -f ~/.profile ]] && . ~/.profile
+#set -e
+#set -x
 
-# Also load .bashrc when logging in
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+# Source all sharable profile scripts
+[[ -f ~/.profile ]] && source ~/.profile
+
+# Also load .bashrc when logging in if running interactively
+[[ -f ~/.bashrc && $- = *i* ]] && source ~/.bashrc

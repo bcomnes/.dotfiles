@@ -1,5 +1,13 @@
 # ~/.profile
 
+# .d folder style bashrc
+# https://gist.github.com/bcomnes/5053fca2d7be573c0abd
+
+#set -o xtrace
+#
+#set -e
+#set -x
+
 run_scripts () {
   local script
 
@@ -9,7 +17,7 @@ run_scripts () {
     [ -f "$script" ] && [ -x "$script" ] || continue
 
     # execute $script in the context of the current shell
-    . $script
+    source $script
   done
 }
 

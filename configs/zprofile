@@ -1,6 +1,9 @@
 #echo 'zprofile'
 
+#set -e
+#set -x
+
 # Source all sharable profile scripts
-[[ -f ~/.profile ]] && . ~/.profile
+[[ -f ~/.profile ]] && source ~/.profile
 
 # Custom zsh only login shell can go here
