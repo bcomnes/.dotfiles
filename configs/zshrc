@@ -1,6 +1,8 @@
 # ~/.zshrc
 # Interactive stuff, like alias's and PS1s etc, just for ZSH
 
+#echo 'zshrc'
+
 #set -e
 #set -x
 
