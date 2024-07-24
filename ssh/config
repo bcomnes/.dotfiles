@@ -8,11 +8,3 @@ ServerAliveInterval 15
 Host tp1.freed.farm tp1.local tp2.local tp3.local tp4.local rpi5.local rpi4.local rpi5
 	user bret
 	ForwardAgent yes
-
-Host tp4.local
-	user pi
-	ForwardAgent yes
-
-Host 54.221.16.178
-	user admin
-	ForwardAgent yes
