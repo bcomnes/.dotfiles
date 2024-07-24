@@ -5,7 +5,7 @@ UseKeychain yes
 AddKeysToAgent yes
 ServerAliveInterval 15
 
-Host tp1.freed.farm tp1.local tp2.local tp3.local rpi5.local
+Host tp1.freed.farm tp1.local tp2.local tp3.local tp4.local rpi5.local rpi4.local rpi5
 	user bret
 	ForwardAgent yes
 
