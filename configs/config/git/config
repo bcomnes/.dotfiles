@@ -5,7 +5,7 @@
 [github]
 	user = bcomnes
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.config/git/gitignore_global
 	ignorecase = false
 	commentChar = auto
 [diff]
@@ -27,12 +27,12 @@
 [credential "https://github.com"]
 	username = bcomnes
 [include]
-	path = ~/.gitconfig.d/push
-	path = ~/.gitconfig.d/mergetool
-	path = ~/.gitconfig.d/gpg
-	path = ~/.gitconfig.d/alias
-	path = ~/.gitconfig.d/keychain
-	path = ~/.gitconfig.d/lfs
+	path = ~/.config/git/push
+	path = ~/.config/git/mergetool
+	path = ~/.config/git/gpg
+	path = ~/.config/git/alias
+	path = ~/.config/git/keychain
+	path = ~/.config/git/lfs
 [pull]
 	rebase = true
 [init]
