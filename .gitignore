@@ -8,6 +8,9 @@ configs/config/*
 !configs/config/zed/
 configs/config/zed/*
 !configs/config/zed/settings.json
+!configs/config/ghosttty/
+configs/config/ghosttty/*
+!configs/config/ghosttty/config
 
 # The SSH folder is opt in for security reasons
 ssh/*

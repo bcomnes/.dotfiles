@@ -14,6 +14,14 @@
     },
     "version": "2"
   },
+  "languages": {
+    "Markdown": {
+      "show_inline_completions": false,
+      "format_on_save": "on",
+      "soft_wrap": "editor_width",
+      "wrap_guides": [80]
+    }
+  },
   "theme": {
     "mode": "system",
     "light": "Atelier Forest Light",
@@ -28,6 +36,9 @@
     "active_line_width": 2,
     "coloring": "indent_aware",
     // "background_coloring": "indent_aware"
+  },
+  "terminal": {
+    "option_as_meta": true
   },
   "tabs": {
     "git_status": true,
