@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
@@ -24,7 +27,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Atelier Forest Light",
+    "light": "Base16 Atelier Forest Light",
     "dark": "Ayu Dark"
   },
   "calls": {
@@ -64,6 +67,13 @@
         "format_on_save": "on",
         "soft_wrap": "editor_width",
         "wrap_guides": [80]
+    }
+  },
+"lsp": {
+    "jsonnet-language-server": {
+      "settings": {
+        "resolve_paths_with_tanka": true
+      }
     }
   }
 }
