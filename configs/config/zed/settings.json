@@ -19,7 +19,7 @@
   },
   "languages": {
     "Markdown": {
-      "show_inline_completions": false,
+      "show_edit_predictions": false,
       "format_on_save": "on",
       "soft_wrap": "editor_width",
       "wrap_guides": [80]
@@ -52,7 +52,7 @@
     "diagnostics": true
   },
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": null,
   "format_on_save": "on",
   "formatter": {
     "code_actions": {
