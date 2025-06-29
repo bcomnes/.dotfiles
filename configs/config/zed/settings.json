@@ -7,14 +7,34 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "context_servers": {
+    "mcp-server-brave-search": {
+      "source": "extension",
+      "settings": {
+        "brave_api_key": "REDACTED"
+      }
+    },
+    "postgres-context-server": {
+      "source": "extension",
+      "settings": {
+        "database_url": "REDACTED"
+      }
+    },
+    "mcp-server-github": {
+      "source": "extension",
+      "settings": {
+        "github_personal_access_token": "REDACTED"
+      }
+    }
+  },
   "features": {
-    "edit_prediction_provider": "copilot",
+    "edit_prediction_provider": "zed"
   },
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-opus-4-latest"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
     },
     "version": "2"
   },
@@ -31,7 +51,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Base16 Atelier Forest Light",
+    "light": "One Light",
     "dark": "Ayu Dark"
   },
   "calls": {
@@ -41,8 +61,8 @@
   "indent_guides": {
     "line_width": 1,
     "active_line_width": 2,
-    "coloring": "indent_aware",
-    // "background_coloring": "indent_aware"
+    "coloring": "indent_aware"
+    //"background_coloring": "indent_aware"
   },
   "tab_size": 2,
   "terminal": {
@@ -69,7 +89,7 @@
       // "source.organizeImports": true
     }
   },
-"lsp": {
+  "lsp": {
     "jsonnet-language-server": {
       "settings": {
         "resolve_paths_with_tanka": true

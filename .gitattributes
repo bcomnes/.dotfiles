@@ -1,0 +1,2 @@
+# Apply clean/smudge filter to Zed settings to redact sensitive keys
+configs/config/zed/settings.json filter=redact-secrets
