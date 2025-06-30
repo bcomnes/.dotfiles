@@ -27,14 +27,18 @@
       }
     }
   },
+  "ensure_final_newline_on_save": true,
+  "git_status": true,
+  "file_icons": true,
   "features": {
+    // "edit_prediction_provider": "copilot"
     "edit_prediction_provider": "zed"
   },
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "model": "claude-opus-4"
     },
     "version": "2"
   },
@@ -62,7 +66,7 @@
     "line_width": 1,
     "active_line_width": 2,
     "coloring": "indent_aware"
-    //"background_coloring": "indent_aware"
+    // "background_coloring": "indent_aware"
   },
   "tab_size": 2,
   "terminal": {

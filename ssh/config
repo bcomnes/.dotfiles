@@ -6,6 +6,6 @@ AddKeysToAgent yes
 ServerAliveInterval 15
 SetEnv TERM=xterm-256color
 
-Host tp1.freed.farm tp1.local tp2.local tp3.local tp3-cm5.local tp4.local rpi5.local rpi5
+Host tp1.freed.farm tp1.local tp2.local tp3.local tp3-cm5.local tp4.local rpi5.local rpi5 tp4.kangaroo-ide.ts.net rpi5.kangaroo-ide.ts.net
 	user bret
 	ForwardAgent yes
