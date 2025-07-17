@@ -8,6 +8,28 @@
 // from the command palette or from `Zed` application menu.
 {
   "context_servers": {
+    "linear": {
+      "source": "custom",
+      "enabled": true,
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.linear.app/sse"
+      ],
+      "env": {}
+    },
+    "sentry": {
+      "source": "custom",
+      "enabled": true,
+      "command": "mcp-remote",
+      "args": [
+      "https://mcp.sentry.dev/sse",
+      "--transport",
+      "sse-only"
+    ],
+      "env": {}
+    },
     "mcp-server-brave-search": {
       "source": "extension",
       "settings": {
@@ -28,19 +50,23 @@
     }
   },
   "ensure_final_newline_on_save": true,
-  "git_status": true,
-  "file_icons": true,
   "features": {
-    // "edit_prediction_provider": "copilot"
     "edit_prediction_provider": "zed"
   },
+  "minimap": {
+    "show": "auto",
+    "thumb": "always",
+    "thumb_border": "full",
+    "current_line_highlight": "all"
+  },
   "agent": {
+    "default_profile": "write",
+    "play_sound_when_agent_done": true,
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-opus-4"
+      "provider": "anthropic",
+      "model": "claude-opus-4-latest"
     },
-    "version": "2"
   },
   "edit_predictions": {
     "mode": "eager"
@@ -55,8 +81,8 @@
   },
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Ayu Dark"
+    "light": "Tron Legacy Light Frosted",
+    "dark": "Tron Legacy Frosted"
   },
   "calls": {
     "mute_on_join": true,
@@ -74,7 +100,8 @@
   },
   "tabs": {
     "git_status": true,
-    "file_icons": true
+    "file_icons": true,
+    "show_diagnostics": "all"
   },
   "buffer_font_family": "SF Mono",
   "buffer_font_fallbacks": ["Zed Plex Mono"],
@@ -83,7 +110,6 @@
     "diagnostics": true
   },
   "ui_font_size": 16,
-  "buffer_font_size": null,
   "format_on_save": "on",
   "formatter": {
     "code_actions": {

@@ -4,7 +4,7 @@
 repo_name=$(basename "$PWD")
 
 # Define the remote URL
-remote_url="bret@tp4.local:~/src/${repo_name}.git"
+remote_url="bret@tp4:~/src/${repo_name}.git"
 
 # Add the remote named 'tp4'
 git remote add tp4 "$remote_url"
