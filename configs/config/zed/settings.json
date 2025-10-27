@@ -7,27 +7,57 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "format_on_save": "on",
+  "audio": {
+    "experimental.auto_microphone_volume": true,
+    "experimental.rodio_audio": true
+  },
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_menus": true
+  },
+  "icon_theme": "Colored Zed Icons Theme Dark",
   "context_servers": {
+    "notion": {
+      "source": "custom",
+      "enabled": false,
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.notion.com/mcp"],
+      "env": {}
+    },
+    "mcp-server-github": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {
+        "github_personal_access_token": "REDACTED" // Socket
+        // "github_personal_access_token": "REDACTED" // Personal
+      }
+    },
+    "socketdocs": {
+      "source": "custom",
+      "enabled": true,
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://docs.socket.dev/mcp"],
+      "env": {}
+    },
     "linear": {
       "source": "custom",
       "enabled": true,
       "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://mcp.linear.app/sse"
-      ],
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
       "env": {}
     },
     "sentry": {
       "source": "custom",
-      "enabled": true,
-      "command": "mcp-remote",
+      "enabled": false,
+      "command": "npx",
       "args": [
-      "https://mcp.sentry.dev/sse",
-      "--transport",
-      "sse-only"
-    ],
+        "-y",
+        "mcp-remote",
+        "https://mcp.sentry.dev/sse",
+        "--transport",
+        "sse-only"
+      ],
       "env": {}
     },
     "mcp-server-brave-search": {
@@ -37,15 +67,10 @@
       }
     },
     "postgres-context-server": {
+      "enabled": true,
       "source": "extension",
       "settings": {
         "database_url": "REDACTED"
-      }
-    },
-    "mcp-server-github": {
-      "source": "extension",
-      "settings": {
-        "github_personal_access_token": "REDACTED"
       }
     }
   },
@@ -65,24 +90,38 @@
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-opus-4-latest"
-    },
+      "model": "claude-sonnet-4-5-latest"
+    }
   },
   "edit_predictions": {
-    "mode": "eager"
+    "mode": "subtle"
   },
   "languages": {
     "Markdown": {
       "show_edit_predictions": false,
-      "format_on_save": "on",
+      "format_on_save": "off",
       "soft_wrap": "editor_width",
       "wrap_guides": [80]
+    },
+    "JavaScript": {
+      "language_servers": ["eslint", "..."],
+      "formatter": [],
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "formatter": [],
+      "language_servers": ["eslint", "..."],
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
     }
   },
   "theme": {
     "mode": "system",
-    "light": "Tron Legacy Light Frosted",
-    "dark": "Tron Legacy Frosted"
+    "light": "Tron Legacy Light",
+    "dark": "Tron Legacy"
   },
   "calls": {
     "mute_on_join": true,
@@ -104,21 +143,11 @@
     "show_diagnostics": "all"
   },
   "buffer_font_family": "SF Mono",
-  "buffer_font_fallbacks": ["Zed Plex Mono"],
   "telemetry": {
-    "metrics": false,
+    "metrics": true,
     "diagnostics": true
   },
   "ui_font_size": 16,
-  "format_on_save": "on",
-  "formatter": {
-    "code_actions": {
-      // Use ESLint's --fix:
-      "source.fixAll.eslint": true,
-      // Organize imports on save:
-      // "source.organizeImports": true
-    }
-  },
   "lsp": {
     "jsonnet-language-server": {
       "settings": {
