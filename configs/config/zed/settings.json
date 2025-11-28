@@ -19,36 +19,31 @@
   "icon_theme": "Colored Zed Icons Theme Dark",
   "context_servers": {
     "notion": {
-      "source": "custom",
       "enabled": false,
       "command": "npx",
       "args": ["-y", "mcp-remote", "https://mcp.notion.com/mcp"],
       "env": {}
     },
     "mcp-server-github": {
-      "source": "extension",
       "enabled": true,
       "settings": {
-        "github_personal_access_token": "REDACTED" // Socket
-        // "github_personal_access_token": "REDACTED" // Personal
+        // "github_personal_access_token": "REDACTED" // Socket
+        "github_personal_access_token": "REDACTED" // Personal
       }
     },
     "socketdocs": {
-      "source": "custom",
-      "enabled": true,
+      "enabled": false,
       "command": "npx",
       "args": ["-y", "mcp-remote", "https://docs.socket.dev/mcp"],
       "env": {}
     },
     "linear": {
-      "source": "custom",
-      "enabled": true,
+      "enabled": false,
       "command": "npx",
       "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
       "env": {}
     },
     "sentry": {
-      "source": "custom",
       "enabled": false,
       "command": "npx",
       "args": [
@@ -61,14 +56,12 @@
       "env": {}
     },
     "mcp-server-brave-search": {
-      "source": "extension",
       "settings": {
         "brave_api_key": "REDACTED"
       }
     },
     "postgres-context-server": {
       "enabled": true,
-      "source": "extension",
       "settings": {
         "database_url": "REDACTED"
       }
