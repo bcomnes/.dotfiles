@@ -97,15 +97,15 @@
       "wrap_guides": [80]
     },
     "JavaScript": {
-      "language_servers": ["eslint", "..."],
+      // "language_servers": ["eslint", "..."],
       "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
     },
     "TypeScript": {
+      // "language_servers": ["eslint", "..."],
       "formatter": [],
-      "language_servers": ["eslint", "..."],
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
