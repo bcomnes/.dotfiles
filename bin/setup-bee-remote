@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Get the current directory name
+repo_name=$(basename "$PWD")
+
+# Define the remote URL
+remote_url="bret@bee.faun-gorgon.ts.net:~/src/${repo_name}.git"
+
+# Add the remote named 'bee'
+git remote add bee "$remote_url"
+
+# Fetch all remotes
+git fetch --all
+
+echo "Remote 'bee' added and all remotes fetched."
