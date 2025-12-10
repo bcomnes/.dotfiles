@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "colorize_brackets": true,
   "format_on_save": "on",
   "audio": {
     "experimental.auto_microphone_volume": true,
@@ -82,7 +83,7 @@
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-5-latest"
+      "model": "claude-sonnet-4-5-thinking-latest"
     }
   },
   "edit_predictions": {

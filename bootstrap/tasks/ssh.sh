@@ -59,8 +59,8 @@ fi
 echo "Fixing ssh permissions"
 chmod go-w ~/
 chmod 700 ~/.ssh
-chmod 600 ~/.ssh/authorized_keys
-chmod 600 ~/.ssh/*
+# Fix only files inside ~/.ssh — do not touch directories like ~/.ssh/agent/
+find ~/.ssh -maxdepth 1 -type f -exec chmod 600 {} \;
 echo "Done fixing ssh permissions"
 
 echo "Done setting up ~/.dotfiles/ssh"
