@@ -1,13 +1,12 @@
 [user]
 	name = Bret Comnes
-	email = bcomnes@gmail.com
+	email = bret@comnes.org
 	username = bcomnes
 [github]
 	user = bcomnes
 [core]
 	excludesfile = ~/.config/git/gitignore_global
 	ignorecase = false
-	commentChar = auto
 [diff]
 	algorithm = histogram
 [color]
