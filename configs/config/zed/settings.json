@@ -23,14 +23,14 @@
       "enabled": true,
       "remote": false,
       "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.linear.app"],
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/mcp"],
       "env": {}
     },
     "mcp-custom-sentry": {
       "enabled": true,
       "remote": false,
       "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.sentry.dev"],
+      "args": ["-y", "mcp-remote", "https://mcp.sentry.dev/mcp"],
       "env": {}
     },
     "mcp-server-brave-search": {
