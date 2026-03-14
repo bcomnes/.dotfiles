@@ -7,150 +7,171 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "colorize_brackets": true,
-  "format_on_save": "on",
-  "audio": {
-    "experimental.auto_microphone_volume": true,
-    "experimental.rodio_audio": true
-  },
-  "title_bar": {
-    "show_branch_icon": true,
-    "show_menus": true
-  },
   "context_servers": {
-    "notion": {
-      "enabled": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.notion.com/mcp"],
-      "env": {}
-    },
-    "mcp-server-github": {
+    "mcp-custom-notion": {
       "enabled": true,
-      "settings": {
-        // "github_personal_access_token": "REDACTED" // Socket
-        "github_personal_access_token": "REDACTED" // Personal
-      }
-    },
-    "socketdocs": {
-      "enabled": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://docs.socket.dev/mcp"],
-      "env": {}
-    },
-    "linear": {
-      "enabled": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"],
-      "env": {}
-    },
-    "sentry": {
-      "enabled": false,
+      "remote": false,
       "command": "npx",
       "args": [
         "-y",
         "mcp-remote",
-        "https://mcp.sentry.dev/sse",
-        "--transport",
-        "sse-only"
+        "https://mcp.notion.com/mcp"
       ],
       "env": {}
     },
+    "mcp-custom-linear": {
+      "enabled": true,
+      "remote": false,
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app"],
+      "env": {}
+    },
+    "mcp-custom-sentry": {
+      "enabled": true,
+      "remote": false,
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.sentry.dev"],
+      "env": {}
+    },
     "mcp-server-brave-search": {
+      "enabled": true,
+      "remote": false,
       "settings": {
         "brave_api_key": "REDACTED"
       }
     },
     "postgres-context-server": {
       "enabled": true,
+      "remote": false,
       "settings": {
         "database_url": "REDACTED"
       }
+    },
+    "mcp-server-github": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "github_personal_access_token": "REDACTED" // Socket
+        // "github_personal_access_token": "REDACTED", // Personal
+      }
+    },
+    "mcp-server-context7": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "context7_api_key": "REDACTED"
+      }
     }
   },
-  "ensure_final_newline_on_save": true,
-  "features": {
-    "edit_prediction_provider": "zed"
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
   },
+  "colorize_brackets": true,
+  "format_on_save": "off",
+  "audio": {
+    "experimental.auto_microphone_volume": true,
+    "experimental.rodio_audio": true,
+  },
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_menus": true,
+  },
+  "ensure_final_newline_on_save": true,
   "minimap": {
     "show": "auto",
     "thumb": "always",
     "thumb_border": "full",
-    "current_line_highlight": "all"
+    "current_line_highlight": "all",
   },
   "agent": {
-    "default_profile": "write",
-    "play_sound_when_agent_done": true,
-    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-5-thinking-latest"
-    }
+      "model": "claude-sonnet-4-6-thinking-latest",
+      "enable_thinking": true
+    },
+    "favorite_models": [],
+    "model_parameters": []
   },
   "edit_predictions": {
-    "mode": "subtle"
+    "provider": "copilot",
+    "mode": "subtle",
   },
   "languages": {
     "Markdown": {
       "show_edit_predictions": false,
       "format_on_save": "off",
       "soft_wrap": "editor_width",
-      "wrap_guides": [80]
+      "wrap_guides": [80],
     },
     "JavaScript": {
       // "language_servers": ["eslint", "..."],
       "formatter": [],
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
     },
     "TypeScript": {
       // "language_servers": ["eslint", "..."],
       "formatter": [],
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
-    }
+        "source.fixAll.eslint": true,
+      },
+    },
   },
   "theme": {
     "mode": "system",
     "light": "Tron Legacy Light",
-    "dark": "Tron Legacy"
+    "dark": "Tron Legacy",
   },
   "icon_theme": {
     "mode": "system",
     "light": "Colored Zed Icons Theme Light",
-    "dark": "Colored Zed Icons Theme Dark"
+    "dark": "Colored Zed Icons Theme Dark",
   },
   "calls": {
     "mute_on_join": true,
-    "share_on_join": false
+    "share_on_join": false,
   },
   "indent_guides": {
     "line_width": 1,
     "active_line_width": 2,
-    "coloring": "indent_aware"
+    "coloring": "indent_aware",
     // "background_coloring": "indent_aware"
   },
   "tab_size": 2,
   "terminal": {
-    "option_as_meta": true
+    "option_as_meta": true,
   },
   "tabs": {
     "git_status": true,
     "file_icons": true,
-    "show_diagnostics": "all"
+    "show_diagnostics": "all",
   },
   "buffer_font_family": "SF Mono",
   "telemetry": {
     "metrics": true,
-    "diagnostics": true
+    "diagnostics": true,
   },
   "ui_font_size": 16,
   "lsp": {
     "jsonnet-language-server": {
       "settings": {
-        "resolve_paths_with_tanka": true
+        "resolve_paths_with_tanka": true,
+      },
+    },
+    "vtsls": {
+      "settings": {
+        "typescript": { "updateImportsOnFileMove": {
+                            "enabled": "always"
+                        },
+                        "tsserver": { "maxTsServerMemory": 16184 } },
+        "javascript": { "updateImportsOnFileMove": {
+                            "enabled": "always"
+                        },
+                        "tsserver": { "maxTsServerMemory": 16184 } }
       }
     }
-  }
+  },
 }

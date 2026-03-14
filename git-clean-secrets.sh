@@ -4,4 +4,5 @@
 
 sed -e 's/"brave_api_key": "[^"]*"/"brave_api_key": "REDACTED"/g' \
     -e 's/"database_url": "[^"]*"/"database_url": "REDACTED"/g' \
-    -e 's/"github_personal_access_token": "[^"]*"/"github_personal_access_token": "REDACTED"/g'
+    -e 's/"github_personal_access_token": "[^"]*"/"github_personal_access_token": "REDACTED"/g' \
+    -e 's/"context7_api_key": "[^"]*"/"context7_api_key": "REDACTED"/g'
