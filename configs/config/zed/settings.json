@@ -11,26 +11,22 @@
     "mcp-custom-notion": {
       "enabled": true,
       "remote": false,
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://mcp.notion.com/mcp"
-      ],
+      "command": "mcp-remote",
+      "args": ["https://mcp.notion.com/mcp"],
       "env": {}
     },
     "mcp-custom-linear": {
       "enabled": true,
       "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.linear.app/mcp"],
+      "command": "mcp-remote",
+      "args": ["https://mcp.linear.app/mcp"],
       "env": {}
     },
     "mcp-custom-sentry": {
       "enabled": true,
       "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.sentry.dev/mcp"],
+      "command": "mcp-remote",
+      "args": ["mcp-remote", "https://mcp.sentry.dev/mcp"],
       "env": {}
     },
     "mcp-server-brave-search": {
@@ -51,8 +47,8 @@
       "enabled": true,
       "remote": false,
       "settings": {
-        "github_personal_access_token": "REDACTED" // Socket
-        // "github_personal_access_token": "REDACTED", // Personal
+        // "github_personal_access_token": "REDACTED" // Socket
+        "github_personal_access_token": "REDACTED", // Personal
       }
     },
     "mcp-server-context7": {
@@ -64,6 +60,15 @@
     }
   },
   "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    },
+    "github-copilot-cli": {
+      "type": "registry"
+    },
+    "codex-acp": {
+      "type": "registry"
+    },
     "claude-acp": {
       "type": "registry"
     }
@@ -142,7 +147,7 @@
   },
   "tab_size": 2,
   "terminal": {
-    "option_as_meta": true,
+    "option_as_meta": true
   },
   "tabs": {
     "git_status": true,
