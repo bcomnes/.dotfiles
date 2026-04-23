@@ -7,27 +7,29 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "right"
+  },
   "context_servers": {
     "mcp-custom-notion": {
-      "enabled": true,
-      "remote": false,
-      "command": "mcp-remote",
-      "args": ["https://mcp.notion.com/mcp"],
-      "env": {}
+      "url": "https://mcp.notion.com/mcp"
     },
     "mcp-custom-linear": {
-      "enabled": true,
-      "remote": false,
-      "command": "mcp-remote",
-      "args": ["https://mcp.linear.app/mcp"],
-      "env": {}
+      "url": "https://mcp.linear.app/mcp"
     },
     "mcp-custom-sentry": {
-      "enabled": true,
-      "remote": false,
-      "command": "mcp-remote",
-      "args": ["mcp-remote", "https://mcp.sentry.dev/mcp"],
-      "env": {}
+      "url": "https://mcp.linear.app/mcp"
     },
     "mcp-server-brave-search": {
       "enabled": true,
@@ -47,8 +49,8 @@
       "enabled": true,
       "remote": false,
       "settings": {
-        // "github_personal_access_token": "REDACTED" // Socket
-        "github_personal_access_token": "REDACTED", // Personal
+        "github_personal_access_token": "REDACTED" // bret-socket-snoopy-zed-hard
+        // "github_personal_access_token": "REDACTED", // Personal
       }
     },
     "mcp-server-context7": {
@@ -77,11 +79,10 @@
   "format_on_save": "off",
   "audio": {
     "experimental.auto_microphone_volume": true,
-    "experimental.rodio_audio": true,
   },
   "title_bar": {
-    "show_branch_icon": true,
     "show_menus": true,
+    "show_branch_status_icon": true
   },
   "ensure_final_newline_on_save": true,
   "minimap": {
@@ -91,9 +92,27 @@
     "current_line_highlight": "all",
   },
   "agent": {
+    "dock": "left",
+    "default_profile": "write",
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^grep\\b"
+            },
+            {
+              "pattern": "^sed\\b"
+            }
+          ],
+          "default": "allow"
+        }
+      }
+    },
     "default_model": {
+      "effort": "max",
       "provider": "anthropic",
-      "model": "claude-sonnet-4-6-thinking-latest",
+      "model": "claude-sonnet-4-6-latest",
       "enable_thinking": true
     },
     "favorite_models": [],
@@ -101,7 +120,7 @@
   },
   "edit_predictions": {
     "provider": "copilot",
-    "mode": "subtle",
+    "mode": "eager",
   },
   "languages": {
     "Markdown": {
