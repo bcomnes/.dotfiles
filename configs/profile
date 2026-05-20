@@ -3,10 +3,10 @@
 # .d folder style bashrc
 # https://gist.github.com/bcomnes/5053fca2d7be573c0abd
 
-#set -o xtrace
-#
-#set -e
+# Uncomment to trace shell initialization
 #set -x
+# Uncomment to exit on error (dangerous in interactive shells — will kill session on any failed command)
+#set -e
 
 run_scripts () {
   local script

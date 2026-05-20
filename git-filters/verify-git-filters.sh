@@ -3,19 +3,22 @@
 
 set -e
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+
 echo "🔍 Verifying Git clean/smudge filter setup..."
 echo ""
 
 # Check if filter scripts exist and are executable
 echo "📁 Checking filter scripts..."
-if [[ -x "./git-clean-secrets.sh" ]]; then
+if [[ -x "$SCRIPT_DIR/git-clean-secrets.sh" ]]; then
     echo "✅ git-clean-secrets.sh exists and is executable"
 else
     echo "❌ git-clean-secrets.sh missing or not executable"
     exit 1
 fi
 
-if [[ -x "./git-smudge-secrets.sh" ]]; then
+if [[ -x "$SCRIPT_DIR/git-smudge-secrets.sh" ]]; then
     echo "✅ git-smudge-secrets.sh exists and is executable"
 else
     echo "❌ git-smudge-secrets.sh missing or not executable"
@@ -25,8 +28,8 @@ fi
 # Check if .gitattributes exists and has the right content
 echo ""
 echo "📝 Checking .gitattributes..."
-if [[ -f "./.gitattributes" ]]; then
-    if grep -q "configs/config/zed/settings.json filter=redact-secrets" .gitattributes; then
+if [[ -f "$REPO_DIR/.gitattributes" ]]; then
+    if grep -q "configs/config/zed/settings.json filter=redact-secrets" "$REPO_DIR/.gitattributes"; then
         echo "✅ .gitattributes configured correctly"
     else
         echo "❌ .gitattributes missing filter configuration"
@@ -47,14 +50,14 @@ FILTER_REQUIRED=$(git config filter.redact-secrets.required 2>/dev/null || echo 
 if [[ -n "$CLEAN_FILTER" ]]; then
     echo "✅ Clean filter configured: $CLEAN_FILTER"
 else
-    echo "❌ Clean filter not configured. Run ./setup-git-filters.sh"
+    echo "❌ Clean filter not configured. Run ./git-filters/setup-git-filters.sh"
     exit 1
 fi
 
 if [[ -n "$SMUDGE_FILTER" ]]; then
     echo "✅ Smudge filter configured: $SMUDGE_FILTER"
 else
-    echo "❌ Smudge filter not configured. Run ./setup-git-filters.sh"
+    echo "❌ Smudge filter not configured. Run ./git-filters/setup-git-filters.sh"
     exit 1
 fi
 
@@ -67,8 +70,8 @@ fi
 # Test the clean filter functionality
 echo ""
 echo "🧪 Testing clean filter functionality..."
-if [[ -f "configs/config/zed/settings.json" ]]; then
-    TEST_OUTPUT=$(cat configs/config/zed/settings.json | ./git-clean-secrets.sh)
+if [[ -f "$REPO_DIR/configs/config/zed/settings.json" ]]; then
+    TEST_OUTPUT=$(cat "$REPO_DIR/configs/config/zed/settings.json" | "$SCRIPT_DIR/git-clean-secrets.sh")
 
     if echo "$TEST_OUTPUT" | grep -q '"brave_api_key": "REDACTED"'; then
         echo "✅ brave_api_key redaction working"
@@ -97,9 +100,9 @@ fi
 # Test what would actually be committed
 echo ""
 echo "💾 Testing actual Git staging behavior..."
-if [[ -f "configs/config/zed/settings.json" ]]; then
+if [[ -f "$REPO_DIR/configs/config/zed/settings.json" ]]; then
     # Stage the file temporarily to test
-    git add configs/config/zed/settings.json 2>/dev/null || true
+    git add "$REPO_DIR/configs/config/zed/settings.json" 2>/dev/null || true
 
     # Check what's in the index (what would be committed)
     INDEX_CONTENT=$(git show :configs/config/zed/settings.json 2>/dev/null || echo "")
