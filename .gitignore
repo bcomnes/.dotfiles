@@ -8,6 +8,7 @@ configs/config/*
 !configs/config/zed/
 configs/config/zed/*
 !configs/config/zed/settings.json
+!configs/config/zed/tasks.json
 !configs/config/ghosttty/
 configs/config/ghosttty/*
 !configs/config/ghosttty/config

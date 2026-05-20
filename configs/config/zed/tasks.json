@@ -1,0 +1,10 @@
+[
+  {
+    "label": "Open in Fork",
+    "command": "fork $ZED_FILE"
+  },
+  {
+    "label": "Open in Ghostty",
+    "command": "ghostty --working-directory=$ZED_WORKTREE_ROOT"
+  }
+]
