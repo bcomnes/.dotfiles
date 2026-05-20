@@ -4,4 +4,7 @@ if [ "$(command -v /opt/homebrew/bin/brew)" ]; then
   if [[ -d /opt/homebrew ]] && [ ! "$(command -v brew)" ]; then
     export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
   fi
+  if [[ -d "$(brew --prefix)/sbin" ]] && [[ ! $PATH == *"$(brew --prefix)/sbin"* ]]; then
+    export PATH=$PATH:$(brew --prefix)/sbin
+  fi
 fi

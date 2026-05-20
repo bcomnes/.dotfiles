@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "cli_default_open_behavior": "existing_window",
+  "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "right"
   },
@@ -22,13 +22,26 @@
     "dock": "right"
   },
   "context_servers": {
+    "mcp-server-sequential-thinking": {
+      "enabled": false,
+      "remote": false,
+      "settings": {}
+    },
     "mcp-custom-notion": {
+      "enabled": true,
       "url": "https://mcp.notion.com/mcp"
     },
     "mcp-custom-linear": {
+      "enabled": true,
       "url": "https://mcp.linear.app/mcp"
     },
+    "mcp-excalidraw": {
+      "enabled": false,
+      "url": "https://api.excalidraw.com/api/v1/mcp",
+      "headers": { "Authorization": "REDACTED" }
+    },
     "mcp-custom-sentry": {
+      "enabled": false,
       "url": "https://mcp.linear.app/mcp"
     },
     "mcp-server-brave-search": {
@@ -75,6 +88,7 @@
       "type": "registry"
     }
   },
+  "code_lens": "on",
   "colorize_brackets": true,
   "format_on_save": "off",
   "audio": {
@@ -110,9 +124,9 @@
       }
     },
     "default_model": {
-      "effort": "max",
+      "effort": "high",
       "provider": "anthropic",
-      "model": "claude-sonnet-4-6-latest",
+      "model": "claude-sonnet-4-6",
       "enable_thinking": true
     },
     "favorite_models": [],
@@ -130,18 +144,21 @@
       "wrap_guides": [80],
     },
     "JavaScript": {
-      // "language_servers": ["eslint", "..."],
+      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
       "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
     },
     "TypeScript": {
-      // "language_servers": ["eslint", "..."],
+      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
       "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
+    },
+    "TSX": {
+      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
     },
   },
   "theme": {
