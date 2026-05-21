@@ -19,10 +19,11 @@ This repository uses Git clean/smudge filters to automatically redact sensitive 
 ### Initial Setup (First Time)
 
 1. Clone the repository
-2. Run the setup script:
+2. Run the bootstrap script:
    ```bash
-   ./setup-git-filters.sh
+   ./bootstrap/install-dotfiles.sh
    ```
+   This automatically runs `git-filters/setup-git-filters.sh` as part of the bootstrap process.
 3. Manually edit `configs/config/zed/settings.json` to replace `REDACTED` values with your actual API keys
 
 ### Adding New Machines
@@ -30,7 +31,7 @@ This repository uses Git clean/smudge filters to automatically redact sensitive 
 When setting up on a new machine:
 
 1. Clone the repository
-2. Run the setup script: `./setup-git-filters.sh`
+2. Run the bootstrap script: `./bootstrap/install-dotfiles.sh`
 3. Edit `configs/config/zed/settings.json` and replace all `REDACTED` values with your real credentials
 
 ## How to Add New Protected Files
@@ -73,9 +74,9 @@ To verify the filters are working:
 ## Troubleshooting
 
 ### Filter Not Working
-- Ensure you've run `./setup-git-filters.sh`
+- Ensure you've run `./git-filters/setup-git-filters.sh`
 - Check Git config: `git config --list | grep filter.redact-secrets`
-- Verify scripts are executable: `ls -la git-*-secrets.sh`
+- Verify scripts are executable: `ls -la git-filters/git-*-secrets.sh`
 
 ### Secrets Still Visible in Commits
 - The filter only applies to files listed in `.gitattributes`

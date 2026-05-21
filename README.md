@@ -69,6 +69,10 @@ configs/
 
 Add a `darwin/` or `linux/` subdirectory variant for platform-specific overrides at any layer.
 
+### Git Filters (Secret Redaction)
+
+Sensitive values in tracked files (API keys, tokens) are automatically redacted on commit via git clean/smudge filters. The bootstrap script sets this up automatically. After bootstrapping, replace any `REDACTED` placeholders in `configs/config/zed/settings.json` with your real credentials. See [git-filters/SECRET-MANAGEMENT.md](git-filters/SECRET-MANAGEMENT.md) for full details.
+
 ### Brew file
 
 Periodically dump a brew file:
