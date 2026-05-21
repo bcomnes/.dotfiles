@@ -7,6 +7,20 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "right"
+  },
   "context_servers": {
     "mcp-server-sequential-thinking": {
       "enabled": false,
@@ -14,29 +28,21 @@
       "settings": {}
     },
     "mcp-custom-notion": {
-      "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://mcp.notion.com/mcp"
-      ],
-      "env": {}
+      "enabled": true,
+      "url": "https://mcp.notion.com/mcp"
     },
     "mcp-custom-linear": {
+      "enabled": true,
+      "url": "https://mcp.linear.app/mcp"
+    },
+    "mcp-excalidraw": {
       "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.linear.app/mcp"],
-      "env": {}
+      "url": "https://api.excalidraw.com/api/v1/mcp",
+      "headers": { "Authorization": "REDACTED" }
     },
     "mcp-custom-sentry": {
       "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.sentry.dev/mcp"],
-      "env": {}
+      "url": "https://mcp.linear.app/mcp"
     },
     "mcp-server-brave-search": {
       "enabled": true,
@@ -56,8 +62,8 @@
       "enabled": true,
       "remote": false,
       "settings": {
-        // "github_personal_access_token": "REDACTED" // Socket
-        "github_personal_access_token": "REDACTED", // Personal
+        "github_personal_access_token": "REDACTED" // bret-socket-snoopy-zed-hard
+        // "github_personal_access_token": "REDACTED", // Personal
       }
     },
     "mcp-server-context7": {
@@ -82,15 +88,15 @@
       "type": "registry"
     }
   },
+  "code_lens": "on",
   "colorize_brackets": true,
   "format_on_save": "off",
   "audio": {
     "experimental.auto_microphone_volume": true,
-    "experimental.rodio_audio": true,
   },
   "title_bar": {
-    "show_branch_icon": true,
     "show_menus": true,
+    "show_branch_status_icon": true
   },
   "ensure_final_newline_on_save": true,
   "minimap": {
@@ -100,9 +106,27 @@
     "current_line_highlight": "all",
   },
   "agent": {
+    "dock": "left",
+    "default_profile": "write",
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^grep\\b"
+            },
+            {
+              "pattern": "^sed\\b"
+            }
+          ],
+          "default": "allow"
+        }
+      }
+    },
     "default_model": {
+      "effort": "high",
       "provider": "anthropic",
-      "model": "claude-sonnet-4-6-thinking-latest",
+      "model": "claude-sonnet-4-6",
       "enable_thinking": true
     },
     "favorite_models": [],
@@ -110,7 +134,7 @@
   },
   "edit_predictions": {
     "provider": "copilot",
-    "mode": "subtle",
+    "mode": "eager",
   },
   "languages": {
     "Markdown": {
@@ -120,18 +144,21 @@
       "wrap_guides": [80],
     },
     "JavaScript": {
-      // "language_servers": ["eslint", "..."],
+      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
       "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
     },
     "TypeScript": {
-      // "language_servers": ["eslint", "..."],
+      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
       "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
+    },
+    "TSX": {
+      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
     },
   },
   "theme": {
@@ -156,7 +183,7 @@
   },
   "tab_size": 2,
   "terminal": {
-    "option_as_meta": true,
+    "option_as_meta": true
   },
   "tabs": {
     "git_status": true,
