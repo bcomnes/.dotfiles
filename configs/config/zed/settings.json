@@ -31,14 +31,13 @@
       "enabled": true,
       "url": "https://mcp.notion.com/mcp"
     },
+    "mcp-custom-socket": {
+      "enabled": true,
+      "url": "https://mcp.socket.dev/"
+    },
     "mcp-custom-linear": {
       "enabled": true,
       "url": "https://mcp.linear.app/mcp"
-    },
-    "mcp-excalidraw": {
-      "enabled": false,
-      "url": "https://api.excalidraw.com/api/v1/mcp",
-      "headers": { "Authorization": "REDACTED" }
     },
     "mcp-custom-sentry": {
       "enabled": false,
@@ -62,7 +61,7 @@
       "enabled": true,
       "remote": false,
       "settings": {
-        "github_personal_access_token": "REDACTED" // bret-socket-snoopy-zed-hard
+        "github_personal_access_token": "REDACTED" // Socket
         // "github_personal_access_token": "REDACTED", // Personal
       }
     },
@@ -82,9 +81,15 @@
       "type": "registry"
     },
     "codex-acp": {
+      "default_config_options": {
+        "mode": "full-access"
+      },
       "type": "registry"
     },
     "claude-acp": {
+      "default_config_options": {
+        "mode": "bypassPermissions"
+      },
       "type": "registry"
     }
   },
@@ -124,9 +129,9 @@
       }
     },
     "default_model": {
-      "effort": "high",
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-6",
+      "effort": "medium",
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
       "enable_thinking": true
     },
     "favorite_models": [],
