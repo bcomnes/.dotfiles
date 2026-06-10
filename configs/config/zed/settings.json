@@ -9,88 +9,89 @@
 {
   "cli_default_open_behavior": "new_window",
   "project_panel": {
-    "dock": "right",
+    "dock": "right"
   },
   "outline_panel": {
-    "dock": "right",
+    "dock": "right"
   },
   "collaboration_panel": {
-    "dock": "right",
+    "dock": "right"
   },
   "git_panel": {
     "tree_view": true,
-    "dock": "right",
+    "dock": "right"
   },
   "context_servers": {
     "mcp-server-sequential-thinking": {
       "enabled": false,
       "remote": false,
-      "settings": {},
+      "settings": {}
     },
     "mcp-custom-notion": {
-      "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.notion.com/mcp"],
-      "env": {},
+      "enabled": true,
+      "url": "https://mcp.notion.com/mcp"
+    },
+    "mcp-custom-socket": {
+      "enabled": true,
+      "url": "https://mcp.socket.dev/"
     },
     "mcp-custom-linear": {
-      "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.linear.app/mcp"],
-      "env": {},
+      "enabled": true,
+      "url": "https://mcp.linear.app/mcp"
     },
     "mcp-custom-sentry": {
       "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.sentry.dev/mcp"],
-      "env": {},
+      "url": "https://mcp.linear.app/mcp"
     },
     "mcp-server-brave-search": {
       "enabled": true,
       "remote": false,
       "settings": {
-        "brave_api_key": "REDACTED",
-      },
+        "brave_api_key": "REDACTED"
+      }
     },
     "postgres-context-server": {
       "enabled": true,
       "remote": false,
       "settings": {
-        "database_url": "REDACTED",
-      },
+        "database_url": "REDACTED"
+      }
     },
     "mcp-server-github": {
       "enabled": true,
       "remote": false,
       "settings": {
-        // "github_personal_access_token": "REDACTED" // Socket
-        "github_personal_access_token": "REDACTED", // Personal
-      },
+        "github_personal_access_token": "REDACTED" // Socket
+        // "github_personal_access_token": "REDACTED", // Personal
+      }
     },
     "mcp-server-context7": {
       "enabled": true,
       "remote": false,
       "settings": {
-        "context7_api_key": "REDACTED",
-      },
-    },
+        "context7_api_key": "REDACTED"
+      }
+    }
   },
   "agent_servers": {
     "opencode": {
-      "type": "registry",
+      "type": "registry"
     },
     "github-copilot-cli": {
-      "type": "registry",
+      "type": "registry"
     },
     "codex-acp": {
-      "type": "registry",
+      "default_config_options": {
+        "mode": "full-access"
+      },
+      "type": "registry"
     },
     "claude-acp": {
-      "type": "registry",
-    },
+      "default_config_options": {
+        "mode": "bypassPermissions"
+      },
+      "type": "registry"
+    }
   },
   "code_lens": "on",
   "colorize_brackets": true,
@@ -100,7 +101,7 @@
   },
   "title_bar": {
     "show_menus": true,
-    "show_branch_status_icon": true,
+    "show_branch_status_icon": true
   },
   "ensure_final_newline_on_save": true,
   "minimap": {
@@ -117,24 +118,24 @@
         "terminal": {
           "always_allow": [
             {
-              "pattern": "^grep\\b",
+              "pattern": "^grep\\b"
             },
             {
-              "pattern": "^sed\\b",
-            },
+              "pattern": "^sed\\b"
+            }
           ],
-          "default": "allow",
-        },
-      },
+          "default": "allow"
+        }
+      }
     },
     "default_model": {
-      "effort": "high",
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-6",
-      "enable_thinking": true,
+      "effort": "medium",
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
+      "enable_thinking": true
     },
     "favorite_models": [],
-    "model_parameters": [],
+    "model_parameters": []
   },
   "edit_predictions": {
     "provider": "copilot",
@@ -187,7 +188,7 @@
   },
   "tab_size": 2,
   "terminal": {
-    "option_as_meta": true,
+    "option_as_meta": true
   },
   "tabs": {
     "git_status": true,
@@ -208,19 +209,15 @@
     },
     "vtsls": {
       "settings": {
-        "typescript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always",
-          },
-          "tsserver": { "maxTsServerMemory": 16184 },
-        },
-        "javascript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always",
-          },
-          "tsserver": { "maxTsServerMemory": 16184 },
-        },
-      },
-    },
+        "typescript": { "updateImportsOnFileMove": {
+                            "enabled": "always"
+                        },
+                        "tsserver": { "maxTsServerMemory": 16184 } },
+        "javascript": { "updateImportsOnFileMove": {
+                            "enabled": "always"
+                        },
+                        "tsserver": { "maxTsServerMemory": 16184 } }
+      }
+    }
   },
 }
