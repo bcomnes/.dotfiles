@@ -27,26 +27,20 @@
       "remote": false,
       "settings": {},
     },
-    "mcp-custom-notion": {
-      "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.notion.com/mcp"],
-      "env": {},
-    },
-    "mcp-custom-linear": {
-      "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.linear.app/mcp"],
-      "env": {},
+    "mcp-custom-github": {
+      "enabled": true,
+      "url": "https://api.githubcopilot.com/mcp/",
+      "oauth": {
+        "client_id": "Ov23li8DzPpb0z73MqKa"
+      }
     },
     "mcp-custom-sentry": {
-      "enabled": false,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.sentry.dev/mcp"],
-      "env": {},
+      "enabled": true,
+      "url": "https://mcp.sentry.dev/mcp"
+    },
+    "mcp-context7": {
+      "enabled": true,
+      "url": "https://mcp.context7.com/mcp/oauth"
     },
     "mcp-server-brave-search": {
       "enabled": true,
@@ -61,22 +55,7 @@
       "settings": {
         "database_url": "REDACTED",
       },
-    },
-    "mcp-server-github": {
-      "enabled": true,
-      "remote": false,
-      "settings": {
-        // "github_personal_access_token": "REDACTED" // Socket
-        "github_personal_access_token": "REDACTED", // Personal
-      },
-    },
-    "mcp-server-context7": {
-      "enabled": true,
-      "remote": false,
-      "settings": {
-        "context7_api_key": "REDACTED",
-      },
-    },
+    }
   },
   "agent_servers": {
     "opencode": {
@@ -116,24 +95,31 @@
     "dock": "left",
     "default_profile": "write",
     "tool_permissions": {
+      "default": "allow",
       "tools": {
         "terminal": {
-          "always_allow": [
+          "default": "allow",
+          "always_confirm": [
             {
-              "pattern": "^grep\\b",
+              "pattern": "\\bsudo\\b",
             },
             {
-              "pattern": "^sed\\b",
+              "pattern": "\\bgit\\s+push\\b",
+            },
+            {
+              "pattern": "\\brm\\b",
             },
           ],
-          "default": "allow",
+        },
+        "delete_path": {
+          "default": "confirm",
         },
       },
     },
     "default_model": {
-      "effort": "high",
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-6",
+      "effort": "medium",
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
       "enable_thinking": true,
     },
     "favorite_models": [],
