@@ -10,23 +10,23 @@
   "diff_view_style": "unified",
   "cli_default_open_behavior": "new_window",
   "project_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "outline_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "collaboration_panel": {
-    "dock": "right"
+    "dock": "right",
   },
   "git_panel": {
     "tree_view": true,
-    "dock": "right"
+    "dock": "right",
   },
   "context_servers": {
     "mcp-server-sequential-thinking": {
       "enabled": false,
       "remote": false,
-      "settings": {}
+      "settings": {},
     },
     "mcp-custom-notion": {
       "enabled": false,
@@ -42,52 +42,48 @@
       "enabled": false,
       "url": "https://mcp.linear.app/mcp"
     },
+    "mcp-custom-github": {
+      "enabled": true,
+      "url": "https://api.githubcopilot.com/mcp/",
+      "oauth": {
+        "client_id": "Ov23li8DzPpb0z73MqKa"
+      }
+    },
     "mcp-custom-sentry": {
       "enabled": true,
       "url": "https://mcp.sentry.dev/mcp"
+    },
+    "mcp-context7": {
+      "enabled": true,
+      "url": "https://mcp.context7.com/mcp/oauth"
     },
     "mcp-server-brave-search": {
       "enabled": true,
       "remote": false,
       "settings": {
-        "brave_api_key": "REDACTED"
-      }
+        "brave_api_key": "REDACTED",
+      },
     },
     "postgres-context-server": {
       "enabled": true,
       "remote": false,
       "settings": {
-        "database_url": "REDACTED"
-      }
-    },
-    "mcp-server-github": {
-      "enabled": true,
-      "remote": false,
-      "settings": {
-        "github_personal_access_token": "REDACTED" // Socket
-        // "github_personal_access_token": "REDACTED", // Personal
-      }
-    },
-    "mcp-server-context7": {
-      "enabled": true,
-      "remote": false,
-      "settings": {
-        "context7_api_key": "REDACTED"
-      }
+        "database_url": "REDACTED",
+      },
     }
   },
   "agent_servers": {
     "opencode": {
-      "type": "registry"
+      "type": "registry",
     },
     "github-copilot-cli": {
-      "type": "registry"
+      "type": "registry",
     },
     "codex-acp": {
       "default_config_options": {
         "mode": "full-access"
       },
-      "type": "registry"
+      "type": "registry",
     },
     "claude-acp": {
       "default_config_options": {
@@ -105,7 +101,7 @@
   },
   "title_bar": {
     "show_menus": true,
-    "show_branch_status_icon": true
+    "show_branch_status_icon": true,
   },
   "ensure_final_newline_on_save": true,
   "minimap": {
@@ -118,28 +114,35 @@
     "dock": "left",
     "default_profile": "write",
     "tool_permissions": {
+      "default": "allow",
       "tools": {
         "terminal": {
-          "always_allow": [
+          "default": "allow",
+          "always_confirm": [
             {
-              "pattern": "^grep\\b"
+              "pattern": "\\bsudo\\b",
             },
             {
-              "pattern": "^sed\\b"
-            }
+              "pattern": "\\bgit\\s+push\\b",
+            },
+            {
+              "pattern": "\\brm\\b",
+            },
           ],
-          "default": "allow"
-        }
-      }
+        },
+        "delete_path": {
+          "default": "confirm",
+        },
+      },
     },
     "default_model": {
       "effort": "medium",
       "provider": "openai-subscribed",
       "model": "gpt-5.5",
-      "enable_thinking": true
+      "enable_thinking": true,
     },
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "edit_predictions": {
     "provider": "copilot",
@@ -192,7 +195,7 @@
   },
   "tab_size": 2,
   "terminal": {
-    "option_as_meta": true
+    "option_as_meta": true,
   },
   "tabs": {
     "git_status": true,
@@ -213,15 +216,19 @@
     },
     "vtsls": {
       "settings": {
-        "typescript": { "updateImportsOnFileMove": {
-                            "enabled": "always"
-                        },
-                        "tsserver": { "maxTsServerMemory": 16184 } },
-        "javascript": { "updateImportsOnFileMove": {
-                            "enabled": "always"
-                        },
-                        "tsserver": { "maxTsServerMemory": 16184 } }
-      }
-    }
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+          "tsserver": { "maxTsServerMemory": 16184 },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+          "tsserver": { "maxTsServerMemory": 16184 },
+        },
+      },
+    },
   },
 }
