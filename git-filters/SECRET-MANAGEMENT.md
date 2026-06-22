@@ -13,6 +13,9 @@ This repository uses Git clean/smudge filters to automatically redact sensitive 
   - `brave_api_key`
   - `database_url`
   - `github_personal_access_token`
+  - `context7_api_key`
+  - `client_id`
+  - `Authorization`
 
 ## Setup Instructions
 

@@ -46,7 +46,7 @@
       "enabled": true,
       "url": "https://api.githubcopilot.com/mcp/",
       "oauth": {
-        "client_id": "Ov23li8DzPpb0z73MqKa"
+        "client_id": "REDACTED"
       }
     },
     "mcp-custom-sentry": {

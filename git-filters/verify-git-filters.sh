@@ -70,31 +70,49 @@ fi
 # Test the clean filter functionality
 echo ""
 echo "🧪 Testing clean filter functionality..."
-if [[ -f "$REPO_DIR/configs/config/zed/settings.json" ]]; then
-    TEST_OUTPUT=$(cat "$REPO_DIR/configs/config/zed/settings.json" | "$SCRIPT_DIR/git-clean-secrets.sh")
+TEST_INPUT='{"brave_api_key": "secret", "database_url": "postgresql://localhost/pipeline_dev", "github_personal_access_token": "secret", "context7_api_key": "secret", "client_id": "secret", "Authorization": "Bearer secret"}'
+TEST_OUTPUT=$(printf '%s\n' "$TEST_INPUT" | "$SCRIPT_DIR/git-clean-secrets.sh")
 
-    if echo "$TEST_OUTPUT" | grep -q '"brave_api_key": "REDACTED"'; then
-        echo "✅ brave_api_key redaction working"
-    else
-        echo "❌ brave_api_key redaction failed"
-        exit 1
-    fi
-
-    if echo "$TEST_OUTPUT" | grep -q '"database_url": "REDACTED"'; then
-        echo "✅ database_url redaction working"
-    else
-        echo "❌ database_url redaction failed"
-        exit 1
-    fi
-
-    if echo "$TEST_OUTPUT" | grep -q '"github_personal_access_token": "REDACTED"'; then
-        echo "✅ github_personal_access_token redaction working"
-    else
-        echo "❌ github_personal_access_token redaction failed"
-        exit 1
-    fi
+if echo "$TEST_OUTPUT" | grep -q '"brave_api_key": "REDACTED"'; then
+    echo "✅ brave_api_key redaction working"
 else
-    echo "⚠️  Zed settings file not found, skipping filter test"
+    echo "❌ brave_api_key redaction failed"
+    exit 1
+fi
+
+if echo "$TEST_OUTPUT" | grep -q '"database_url": "REDACTED"'; then
+    echo "✅ database_url redaction working"
+else
+    echo "❌ database_url redaction failed"
+    exit 1
+fi
+
+if echo "$TEST_OUTPUT" | grep -q '"github_personal_access_token": "REDACTED"'; then
+    echo "✅ github_personal_access_token redaction working"
+else
+    echo "❌ github_personal_access_token redaction failed"
+    exit 1
+fi
+
+if echo "$TEST_OUTPUT" | grep -q '"context7_api_key": "REDACTED"'; then
+    echo "✅ context7_api_key redaction working"
+else
+    echo "❌ context7_api_key redaction failed"
+    exit 1
+fi
+
+if echo "$TEST_OUTPUT" | grep -q '"client_id": "REDACTED"'; then
+    echo "✅ client_id redaction working"
+else
+    echo "❌ client_id redaction failed"
+    exit 1
+fi
+
+if echo "$TEST_OUTPUT" | grep -q '"Authorization": "REDACTED"'; then
+    echo "✅ Authorization redaction working"
+else
+    echo "❌ Authorization redaction failed"
+    exit 1
 fi
 
 # Test what would actually be committed
@@ -110,7 +128,7 @@ if [[ -f "$REPO_DIR/configs/config/zed/settings.json" ]]; then
     if [[ -n "$INDEX_CONTENT" ]]; then
         if echo "$INDEX_CONTENT" | grep -q '"brave_api_key": "REDACTED"' && \
            echo "$INDEX_CONTENT" | grep -q '"database_url": "REDACTED"' && \
-           echo "$INDEX_CONTENT" | grep -q '"github_personal_access_token": "REDACTED"'; then
+           echo "$INDEX_CONTENT" | grep -q '"client_id": "REDACTED"'; then
             echo "✅ Secrets properly redacted in Git index"
         else
             echo "❌ Secrets NOT redacted in Git index!"
