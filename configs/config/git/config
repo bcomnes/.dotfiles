@@ -39,5 +39,3 @@
 	insteadOf = https://github.com/
 [help]
 	autoCorrect = prompt
-[submodule]
-	recurse = true

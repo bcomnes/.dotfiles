@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "diff_view_style": "unified",
   "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "right"
@@ -28,20 +29,22 @@
       "settings": {}
     },
     "mcp-custom-notion": {
-      "enabled": true,
+      "enabled": false,
       "url": "https://mcp.notion.com/mcp"
     },
     "mcp-custom-socket": {
-      "enabled": true,
-      "url": "https://mcp.socket.dev/"
+      "enabled": false,
+      "url": "https://mcp.socket.dev/",
+      // "url": "https://mcp.socket-staging.dev/",
+      //"headers": { "Authorization": "REDACTED" }
     },
     "mcp-custom-linear": {
-      "enabled": true,
+      "enabled": false,
       "url": "https://mcp.linear.app/mcp"
     },
     "mcp-custom-sentry": {
-      "enabled": false,
-      "url": "https://mcp.linear.app/mcp"
+      "enabled": true,
+      "url": "https://mcp.sentry.dev/mcp"
     },
     "mcp-server-brave-search": {
       "enabled": true,
@@ -88,6 +91,7 @@
     },
     "claude-acp": {
       "default_config_options": {
+        "model": "claude-fable-5[1m]",
         "mode": "bypassPermissions"
       },
       "type": "registry"
@@ -139,7 +143,7 @@
   },
   "edit_predictions": {
     "provider": "copilot",
-    "mode": "eager",
+    "mode": "subtle",
   },
   "languages": {
     "Markdown": {
