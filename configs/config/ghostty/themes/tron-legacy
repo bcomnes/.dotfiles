@@ -1,0 +1,26 @@
+# Tron Legacy for Ghostty
+# Ported from zed-theme-tron-legacy dark terminal palette
+
+background = #14191f
+foreground = #aec2e0
+cursor-color = #6ee2ff
+cursor-text = #14191f
+selection-background = #2a3039
+selection-foreground = #dae3f1
+
+palette = 0=#000000
+palette = 1=#ff410d
+palette = 2=#c7f026
+palette = 3=#ffd12c
+palette = 4=#267fb5
+palette = 5=#ff79c6
+palette = 6=#6ee2ff
+palette = 7=#aec2e0
+palette = 8=#7891b0
+palette = 9=#ff5f52
+palette = 10=#95cc5e
+palette = 11=#ffe792
+palette = 12=#c8d9e8
+palette = 13=#ffb3e1
+palette = 14=#4a95b3
+palette = 15=#ffffff
