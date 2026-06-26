@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "diff_view_style": "unified",
   "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "right",
@@ -27,11 +28,25 @@
       "remote": false,
       "settings": {},
     },
+    "mcp-custom-notion": {
+      "enabled": false,
+      "url": "https://mcp.notion.com/mcp"
+    },
+    "mcp-custom-socket": {
+      "enabled": false,
+      "url": "https://mcp.socket.dev/",
+      // "url": "https://mcp.socket-staging.dev/",
+      //"headers": { "Authorization": "REDACTED" }
+    },
+    "mcp-custom-linear": {
+      "enabled": false,
+      "url": "https://mcp.linear.app/mcp"
+    },
     "mcp-custom-github": {
       "enabled": true,
       "url": "https://api.githubcopilot.com/mcp/",
       "oauth": {
-        "client_id": "Ov23li8DzPpb0z73MqKa"
+        "client_id": "REDACTED"
       }
     },
     "mcp-custom-sentry": {
@@ -71,8 +86,12 @@
       "type": "registry",
     },
     "claude-acp": {
-      "type": "registry",
-    },
+      "default_config_options": {
+        "model": "claude-fable-5[1m]",
+        "mode": "bypassPermissions"
+      },
+      "type": "registry"
+    }
   },
   "code_lens": "on",
   "colorize_brackets": true,
@@ -127,7 +146,7 @@
   },
   "edit_predictions": {
     "provider": "copilot",
-    "mode": "eager",
+    "mode": "subtle",
   },
   "languages": {
     "Markdown": {
