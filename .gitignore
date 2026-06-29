@@ -9,9 +9,12 @@ configs/config/*
 configs/config/zed/*
 !configs/config/zed/settings.json
 !configs/config/zed/tasks.json
-!configs/config/ghosttty/
-configs/config/ghosttty/*
-!configs/config/ghosttty/config
+!configs/config/ghostty/
+configs/config/ghostty/*
+!configs/config/ghostty/config
+!configs/config/ghostty/themes/
+!configs/config/ghostty/themes/*
+
 
 # The SSH folder is opt in for security reasons
 ssh/*
