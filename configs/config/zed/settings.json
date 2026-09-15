@@ -7,8 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "diff_view_style": "unified",
-  "cli_default_open_behavior": "new_window",
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "session": {
+    "trust_all_worktrees": false
+  },
+  "diff_view_style": "split",
+  "cli_default_open_behavior": "existing_window",
   "project_panel": {
     "dock": "right",
   },
@@ -19,6 +25,7 @@
     "dock": "right",
   },
   "git_panel": {
+    "group_by": "staging",
     "tree_view": true,
     "dock": "right",
   },
@@ -29,7 +36,7 @@
       "settings": {},
     },
     "mcp-custom-notion": {
-      "enabled": false,
+      "enabled": true,
       "url": "https://mcp.notion.com/mcp"
     },
     "mcp-custom-socket": {
@@ -39,7 +46,7 @@
       //"headers": { "Authorization": "REDACTED" }
     },
     "mcp-custom-linear": {
-      "enabled": false,
+      "enabled": true,
       "url": "https://mcp.linear.app/mcp"
     },
     "mcp-custom-github": {
@@ -111,6 +118,19 @@
     "current_line_highlight": "all",
   },
   "agent": {
+    "play_sound_when_agent_done": "always",
+    "sandbox_permissions": {
+      "allow_unsandboxed": true,
+      "network_hosts": [
+        "zed.dev",
+        "sum.golang.org",
+        "proxy.golang.org",
+        "sum.golang.google.cn",
+        "raw.githubusercontent.com",
+        "htmx.org",
+        "api.github.com"
+      ]
+    },
     "dock": "left",
     "default_profile": "write",
     "tool_permissions": {
@@ -136,16 +156,16 @@
       },
     },
     "default_model": {
-      "effort": "medium",
+      "effort": "high",
       "provider": "openai-subscribed",
-      "model": "gpt-5.5",
+      "model": "gpt-6-astra",
       "enable_thinking": true,
     },
     "favorite_models": [],
     "model_parameters": [],
   },
   "edit_predictions": {
-    "provider": "copilot",
+    "provider": "zed",
     "mode": "subtle",
   },
   "languages": {
@@ -188,6 +208,7 @@
     "share_on_join": false,
   },
   "indent_guides": {
+    "background_coloring": "indent_aware",
     "line_width": 1,
     "active_line_width": 2,
     "coloring": "indent_aware",
