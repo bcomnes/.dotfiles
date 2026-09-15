@@ -1,0 +1,305 @@
+tap "bcomnes/tap"
+tap "github/gh", trusted: true
+tap "hashicorp/tap" trusted: true
+tap "oven-sh/bun", trusted: true
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Utility for connecting securely to your Cloud SQL instances
+brew "cloud-sql-proxy"
+# Cross-platform make
+brew "cmake"
+# Documentation for CMake
+brew "cmake-docs"
+# Color-highlighted diff(1) output
+brew "colordiff"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Lint your Python code for style and logical errors
+brew "flake8"
+# Command-line tools for fly.io services
+brew "flyctl"
+# GNU compiler collection
+brew "gcc"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Library for USB device access
+brew "libusb"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Apply a diff file to an original
+brew "gpatch"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Kubernetes package manager
+brew "helm"
+# Improved top (interactive process viewer)
+brew "htop"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
+# JSON diff and patch
+brew "jd"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Package manager for Jsonnet
+brew "jsonnet-bundler"
+# Modern load testing tool, using Go and JavaScript
+brew "k6"
+# Open-source distributed event streaming platform
+brew "kafka", restart_service: :changed
+# Tool for linting and static analysis of Lua code
+brew "luacheck"
+# Text-based web browser
+brew "lynx"
+# Mac App Store command-line interface
+brew "mas"
+# CLI for Mermaid library
+brew "mermaid-cli"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node@24"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
+# Terminal multiplexer
+brew "tmux"
+# Process manager for Procfile-based applications and tmux
+brew "overmind"
+# Small collection of programs that operate on patch files
+brew "patchutils"
+# Lightweight connection pooler for PostgreSQL
+brew "pgbouncer"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Fast, disk space efficient package manager
+brew "pnpm"
+# Python package management tool
+brew "poetry"
+# Object-relational database system
+brew "postgresql@17", link: true
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Show ps output as a tree
+brew "pstree"
+# Simple Python style checker in one Python file
+brew "pycodestyle"
+# Easily download, build, install, upgrade, and uninstall Python packages
+brew "python-setuptools"
+# Persistent key-value database, with built-in net interface
+brew "redis", restart_service: :changed
+# Utility that provides fast incremental file transfer
+brew "rsync"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Rust toolchain installer
+brew "rustup", link: true
+# Fast distributed storage system
+brew "seaweedfs", restart_service: :changed
+# Easily detect and prevent bugs and anti-patterns in your codebase
+brew "semgrep"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Hunt down social media accounts by username
+brew "sherlock"
+# Flexible, reusable and concise configuration for Kubernetes using Jsonnet
+brew "tanka"
+# Text interface for Git repositories
+brew "tig"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Sends magic packets to wake up network-devices
+brew "wakeonlan"
+# Internet file retriever
+brew "wget"
+# Show the current WiFi network password
+brew "wifi-password"
+# Linter for YAML files
+brew "yamllint"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+# Find security issues in GitHub Actions setups
+brew "zizmor"
+# Additional completion definitions for zsh
+brew "zsh-completions"
+# Create projects from tar-based templates
+brew "bcomnes/tap/gogogo", trusted: true
+# Run PostgreSQL and SQLite database migrations
+brew "bcomnes/tap/gostgrator", trusted: true
+# Manage semantic version bumps in Go projects
+brew "bcomnes/tap/goversion", trusted: true
+# Packer
+brew "hashicorp/tap/packer", trusted: true
+# Terraform
+brew "hashicorp/tap/terraform", trusted: true
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
+# Application uninstaller
+cask "appcleaner"
+# Web browser focusing on privacy
+cask "brave-browser"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Column-oriented database management system
+cask "clickhouse"
+# OpenAI's Codex desktop app for managing coding agents
+cask "codex-app"
+# Browser for SQLite databases
+cask "db-browser-for-sqlite"
+# Universal database tool and SQL client
+cask "dbeaver-community"
+# Voice and text chat software
+cask "discord"
+# Metadata cleaner
+cask "exifcleaner"
+# Web browser
+cask "firefox"
+cask "font-atkinson-hyperlegible"
+cask "font-atkinson-hyperlegible-mono"
+cask "font-atkinson-hyperlegible-next"
+cask "font-comic-mono"
+cask "font-new-york"
+cask "font-sf-compact"
+cask "font-sf-mono"
+cask "font-sf-pro"
+# GIT client
+cask "fork"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Homebrew's official GUI
+cask "homebrew-app"
+# Avalonia-based .NET decompiler
+cask "ilspy"
+# Tool to optimise images to a smaller size
+cask "imageoptim"
+# Hex editor for reverse engineers
+cask "imhex"
+# Tool to prevent the system from going into sleep mode
+cask "keepingyouawake"
+# Kubernetes IDE
+cask "lens"
+# App to manage software development and track bugs
+cask "linear"
+# Host-based application firewall
+cask "little-snitch"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# XMPP chat client
+cask "monal"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
+# Utility to move and zoom windows—on one display
+cask "moom"
+# Tool for editing metadata of audio files including MP3, FLAC, OGG, and more
+cask "ngrok"
+# App to write, plan, collaborate, and get organised
+cask "notion"
+# Professional webcam software for the Opal C1
+cask "opal-composer"
+# Replacement for Docker Desktop
+cask "orbstack"
+# Administration and development platform for PostgreSQL
+cask "pgadmin4"
+# App wrapper for Postgres
+cask "postgres-app"
+# GUI client for PostgreSQL databases
+cask "postico"
+# Collaboration platform for API development
+cask "postman"
+# Archive manager for data compression and backups
+cask "rar"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
+# Use any of your display's available resolutions
+cask "resolutionator"
+# Tool that provides consistent, highly configurable symbols for apps
+cask "sf-symbols"
+# Instant messaging application focusing on security
+cask "signal"
+# Digital design and prototyping platform
+cask "sketch"
+# Team communication and collaboration software
+cask "slack"
+# Video game digital distribution service
+cask "steam"
+# Git client
+cask "sublime-merge"
+# Text editor for code, markup and prose
+cask "sublime-text"
+# Dictation tool including LLM reformatting
+cask "superwhisper"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
+# Open-source BitTorrent client
+cask "transmission"
+# File transfer application
+cask "transmit"
+# Open-source code editor
+cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+# Lossless audio decoder
+cask "xld"
+# Open-source version of the X.Org X Window System
+cask "xquartz"
+# Multiplayer code editor
+cask "zed"
+mas "DaisyDisk", id: 411643860
+mas "Daylight Capture", id: 6502664563
+mas "Daylight Desktop", id: 6503941498
+mas "Deliveries", id: 290986013
+mas "Discovery", id: 1381004916
+mas "Flame", id: 325206381
+mas "Flighty", id: 1358823008
+mas "Internet Access Policy Viewer", id: 1482630322
+mas "Keynote", id: 409183694
+mas "Knockoff", id: 6788401939
+mas "Mactracker", id: 430255202
+mas "Medis", id: 1579200037
+mas "Mela", id: 1568924476
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Reeder", id: 1529448980
+mas "reMarkable", id: 1276493162
+mas "Remote Desktop", id: 409907375
+mas "Shazam", id: 897118787
+mas "Soulver", id: 1508732804
+mas "Speedtest", id: 1153157709
+mas "Things", id: 904280696
+mas "Whisper Transcription", id: 1668083311
+mas "Windows App", id: 1295203466
+mas "Wipr", id: 0
+mas "Xcode", id: 497799835
+mas "Yubico Authenticator", id: 1497506650
