@@ -7,6 +7,24 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "inlay_hints": {
+    "show_background": false,
+    "enabled": false
+  },
+  "vim": {
+    "toggle_relative_line_numbers": false
+  },
+  "toolbar": {
+    "code_actions": true
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "text_rendering_mode": "platform_default",
+  "ui_font_family": ".ZedSans",
+  "buffer_line_height": "comfortable",
+  "redact_private_values": true,
+  "semantic_tokens": "combined",
   "diff_view_style": "unified",
   "cli_default_open_behavior": "new_window",
   "project_panel": {
@@ -111,6 +129,17 @@
     "current_line_highlight": "all",
   },
   "agent": {
+    "sandbox_permissions": {
+      "allow_unsandboxed": true,
+      "network_hosts": [
+        "raw.githubusercontent.com",
+        "api.github.com",
+        "registry.npmjs.org",
+        "docs.npmjs.com",
+        "github.com",
+        "napi.rs"
+      ]
+    },
     "dock": "left",
     "default_profile": "write",
     "tool_permissions": {
@@ -122,30 +151,24 @@
             {
               "pattern": "\\bsudo\\b",
             },
-            {
-              "pattern": "\\bgit\\s+push\\b",
-            },
-            {
-              "pattern": "\\brm\\b",
-            },
           ],
         },
         "delete_path": {
-          "default": "confirm",
+          "default": "allow",
         },
       },
     },
     "default_model": {
-      "effort": "medium",
+      "effort": "low",
       "provider": "openai-subscribed",
-      "model": "gpt-5.5",
+      "model": "gpt-6-astra",
       "enable_thinking": true,
     },
     "favorite_models": [],
     "model_parameters": [],
   },
   "edit_predictions": {
-    "provider": "copilot",
+    "provider": "zed",
     "mode": "subtle",
   },
   "languages": {
@@ -156,21 +179,21 @@
       "wrap_guides": [80],
     },
     "JavaScript": {
-      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
       "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
     },
     "TypeScript": {
-      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
       "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
     },
     "TSX": {
-      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
     },
   },
   "theme": {
@@ -188,6 +211,7 @@
     "share_on_join": false,
   },
   "indent_guides": {
+    "background_coloring": "indent_aware",
     "line_width": 1,
     "active_line_width": 2,
     "coloring": "indent_aware",

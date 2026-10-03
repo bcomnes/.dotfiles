@@ -4,6 +4,7 @@
 configs/config/*
 !configs/config/htop
 !configs/config/create-project.json
+!configs/config/gogogo.json
 !configs/config/git
 !configs/config/zed/
 configs/config/zed/*
