@@ -7,12 +7,15 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "inlay_hints": {
-    "show_background": false,
-    "enabled": false
+  "sticky_scroll": {
+    "enabled": true
   },
+  "relative_line_numbers": "enabled",
   "vim": {
     "toggle_relative_line_numbers": false
+  },
+  "session": {
+    "trust_all_worktrees": false
   },
   "toolbar": {
     "code_actions": true
@@ -26,7 +29,7 @@
   "redact_private_values": true,
   "semantic_tokens": "combined",
   "diff_view_style": "unified",
-  "cli_default_open_behavior": "new_window",
+  "cli_default_open_behavior": "existing_window",
   "project_panel": {
     "dock": "right",
   },
@@ -37,17 +40,23 @@
     "dock": "right",
   },
   "git_panel": {
+    "group_by": "staging",
     "tree_view": true,
     "dock": "right",
   },
   "context_servers": {
+    "chrome-devtools-mcp-zed": {
+      "enabled": false,
+      "remote": false,
+      "settings": {}
+    },
     "mcp-server-sequential-thinking": {
       "enabled": false,
       "remote": false,
       "settings": {},
     },
     "mcp-custom-notion": {
-      "enabled": false,
+      "enabled": true,
       "url": "https://mcp.notion.com/mcp"
     },
     "mcp-custom-socket": {
@@ -57,14 +66,15 @@
       //"headers": { "Authorization": "REDACTED" }
     },
     "mcp-custom-linear": {
-      "enabled": false,
+      "enabled": true,
       "url": "https://mcp.linear.app/mcp"
     },
     "mcp-custom-github": {
       "enabled": true,
       "url": "https://api.githubcopilot.com/mcp/",
       "oauth": {
-        "client_id": "REDACTED"
+        "client_id": "REDACTED",
+        "client_secret": "REDACTED"
       }
     },
     "mcp-custom-sentry": {
@@ -88,6 +98,13 @@
       "settings": {
         "database_url": "REDACTED",
       },
+    },
+    "chrome-devtools-mcp": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "browser_url": "http://127.0.0.1:9223"
+      }
     }
   },
   "agent_servers": {
@@ -129,10 +146,18 @@
     "current_line_highlight": "all",
   },
   "agent": {
+    "show_turn_stats": true,
+    "thinking_display": "preview",
+    "play_sound_when_agent_done": "always",
     "sandbox_permissions": {
       "allow_unsandboxed": true,
       "network_hosts": [
+        "zed.dev",
+        "sum.golang.org",
+        "proxy.golang.org",
+        "sum.golang.google.cn",
         "raw.githubusercontent.com",
+        "htmx.org",
         "api.github.com",
         "registry.npmjs.org",
         "docs.npmjs.com",

@@ -15,6 +15,7 @@ This repository uses Git clean/smudge filters to automatically redact sensitive 
   - `github_personal_access_token`
   - `context7_api_key`
   - `client_id`
+  - `client_secret`
   - `Authorization`
 
 ## Setup Instructions

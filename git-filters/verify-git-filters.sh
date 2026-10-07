@@ -108,6 +108,15 @@ else
     exit 1
 fi
 
+for SECRET_INPUT in '"client_secret": "secret"' '"client_secret":"secret"' '"client_secret" : "escaped\"secret"'; do
+    SECRET_OUTPUT=$(printf '%s\n' "$SECRET_INPUT" | "$SCRIPT_DIR/git-clean-secrets.sh")
+    if [[ "$SECRET_OUTPUT" != '"client_secret": "REDACTED"' ]]; then
+        echo "❌ client_secret redaction failed"
+        exit 1
+    fi
+done
+echo "✅ client_secret redaction working"
+
 if echo "$TEST_OUTPUT" | grep -q '"Authorization": "REDACTED"'; then
     echo "✅ Authorization redaction working"
 else
