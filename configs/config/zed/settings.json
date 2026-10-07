@@ -24,7 +24,6 @@
     "enabled": true
   },
   "text_rendering_mode": "platform_default",
-  "ui_font_family": ".ZedSans",
   "buffer_line_height": "comfortable",
   "redact_private_values": true,
   "semantic_tokens": "combined",
@@ -131,9 +130,6 @@
   "code_lens": "on",
   "colorize_brackets": true,
   "format_on_save": "off",
-  "audio": {
-    "experimental.auto_microphone_volume": true,
-  },
   "title_bar": {
     "show_menus": true,
     "show_branch_status_icon": true,
