@@ -7,3 +7,13 @@
 [[ -f ~/.profile ]] && source ~/.profile
 
 # Custom zsh only login shell can go here
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+
+# Loaded by ~/.profile.d/darwin/path-orbstack.sh instead.
+# Keep the source line commented out rather than deleting it: OrbStack may re-add
+# a deleted line, but recognizes a commented line as intentionally disabled.
+# https://github.com/orbstack/orbstack/issues/1283
+
+# source ~/.orbstack/shell/init.zsh 2>/dev/null || :

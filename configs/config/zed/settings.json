@@ -30,6 +30,11 @@
     "dock": "right",
   },
   "context_servers": {
+    "chrome-devtools-mcp-zed": {
+      "enabled": false,
+      "remote": false,
+      "settings": {}
+    },
     "mcp-server-sequential-thinking": {
       "enabled": false,
       "remote": false,
@@ -53,7 +58,8 @@
       "enabled": true,
       "url": "https://api.githubcopilot.com/mcp/",
       "oauth": {
-        "client_id": "REDACTED"
+        "client_id": "REDACTED",
+        "client_secret": "REDACTED"
       }
     },
     "mcp-custom-sentry": {
@@ -77,6 +83,13 @@
       "settings": {
         "database_url": "REDACTED",
       },
+    },
+    "chrome-devtools-mcp": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "browser_url": "http://127.0.0.1:9223"
+      }
     }
   },
   "agent_servers": {
@@ -118,6 +131,8 @@
     "current_line_highlight": "all",
   },
   "agent": {
+    "show_turn_stats": true,
+    "thinking_display": "preview",
     "play_sound_when_agent_done": "always",
     "sandbox_permissions": {
       "allow_unsandboxed": true,
@@ -156,7 +171,7 @@
       },
     },
     "default_model": {
-      "effort": "high",
+      "effort": "low",
       "provider": "openai-subscribed",
       "model": "gpt-6-astra",
       "enable_thinking": true,

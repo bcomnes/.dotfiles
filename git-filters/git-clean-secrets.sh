@@ -2,9 +2,10 @@
 # Git clean filter to redact sensitive API keys from Zed settings
 # This script runs when files are staged for commit
 
-sed -e 's/"brave_api_key": "[^"]*"/"brave_api_key": "REDACTED"/g' \
+sed -E -e 's/"brave_api_key": "[^"]*"/"brave_api_key": "REDACTED"/g' \
     -e 's/"database_url": "[^"]*"/"database_url": "REDACTED"/g' \
     -e 's/"github_personal_access_token": "[^"]*"/"github_personal_access_token": "REDACTED"/g' \
     -e 's/"context7_api_key": "[^"]*"/"context7_api_key": "REDACTED"/g' \
     -e 's/"client_id": "[^"]*"/"client_id": "REDACTED"/g' \
+    -e 's/"client_secret"[[:blank:]]*:[[:blank:]]*"([^"\\]|\\.)*"/"client_secret": "REDACTED"/g' \
     -e 's/"Authorization": "[^"]*"/"Authorization": "REDACTED"/g'

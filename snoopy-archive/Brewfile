@@ -1,6 +1,6 @@
 tap "bcomnes/tap"
 tap "github/gh", trusted: true
-tap "hashicorp/tap" trusted: true
+tap "hashicorp/tap", trusted: true
 tap "oven-sh/bun", trusted: true
 # Automatic configure script builder
 brew "autoconf"
