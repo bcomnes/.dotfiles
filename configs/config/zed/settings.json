@@ -10,10 +10,25 @@
   "sticky_scroll": {
     "enabled": true
   },
+  "relative_line_numbers": "enabled",
+  "vim": {
+    "toggle_relative_line_numbers": false
+  },
   "session": {
     "trust_all_worktrees": false
   },
-  "diff_view_style": "split",
+  "toolbar": {
+    "code_actions": true
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "text_rendering_mode": "platform_default",
+  "ui_font_family": ".ZedSans",
+  "buffer_line_height": "comfortable",
+  "redact_private_values": true,
+  "semantic_tokens": "combined",
+  "diff_view_style": "unified",
   "cli_default_open_behavior": "existing_window",
   "project_panel": {
     "dock": "right",
@@ -143,7 +158,11 @@
         "sum.golang.google.cn",
         "raw.githubusercontent.com",
         "htmx.org",
-        "api.github.com"
+        "api.github.com",
+        "registry.npmjs.org",
+        "docs.npmjs.com",
+        "github.com",
+        "napi.rs"
       ]
     },
     "dock": "left",
@@ -157,16 +176,10 @@
             {
               "pattern": "\\bsudo\\b",
             },
-            {
-              "pattern": "\\bgit\\s+push\\b",
-            },
-            {
-              "pattern": "\\brm\\b",
-            },
           ],
         },
         "delete_path": {
-          "default": "confirm",
+          "default": "allow",
         },
       },
     },
@@ -191,21 +204,21 @@
       "wrap_guides": [80],
     },
     "JavaScript": {
-      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
       "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
     },
     "TypeScript": {
-      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
       "formatter": [],
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
     },
     "TSX": {
-      // "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
+      "language_servers": ["tsgo", "!vtsls", "!typescript-language-server", "..."],
     },
   },
   "theme": {

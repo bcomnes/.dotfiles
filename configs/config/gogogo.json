@@ -1,0 +1,15 @@
+{
+  "github": {
+    "user": "bcomnes",
+    "repo": "go-template",
+    "branch": "master"
+  },
+  "github_visibility": "public",
+  "defaults": {},
+  "templates": {
+    "cjs": "bcomnes/cjs-template#master",
+    "esm": "bcomnes/esm-template#master",
+    "go": "bcomnes/go-template#master",
+    "ts": "bcomnes/ts-template#master"
+  }
+}
